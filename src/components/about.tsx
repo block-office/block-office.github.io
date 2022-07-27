@@ -29,9 +29,15 @@ const InvestorImages = styled.div`
   margin-top: 1em;
 `;
 
-const InvestorImage = styled.img`
-  // margin: 2em;
-`;
+const InvestorImage = styled.img<{ imgSrc: string }>`
+@media (prefers-color-scheme: dark) {
+  content: url('img/partners/dark/${(props) => props.imgSrc}')
+}
+
+@media (prefers-color-scheme: light) {
+  content: url('img/partners/light/${(props) => props.imgSrc}')
+  }
+}`;
 
 function getInvestorImage(svg: string) {
   var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -44,17 +50,17 @@ export const AboutV2 = () => {
       <AboutContainer>
         <AboutText>backed by investors from</AboutText>
         <InvestorImages>
-          <InvestorImage src={getInvestorImage("accel.svg")} />
-          <InvestorImage src={getInvestorImage("atomico.svg")} />
-          <InvestorImage src={getInvestorImage("coinbase.svg")} />
-          <InvestorImage src={getInvestorImage("draper.svg")} />
-          <InvestorImage src={getInvestorImage("kkr.svg")} />
-          <InvestorImage src={getInvestorImage("nansen.svg")} />
-          <InvestorImage src={getInvestorImage("revolut.svg")} />
-          <InvestorImage src={getInvestorImage("sequoia.svg")} />
-          <InvestorImage src={getInvestorImage("solana.svg")} />
-          <InvestorImage src={getInvestorImage("temasek.svg")} />
-          <InvestorImage src={getInvestorImage("wise.svg")} />
+          <InvestorImage imgSrc={"accel.svg"} />
+          <InvestorImage imgSrc={"atomico.svg"} />
+          <InvestorImage imgSrc={"coinbase.svg"} />
+          <InvestorImage imgSrc={"draper.svg"} />
+          <InvestorImage imgSrc={"kkr.svg"} />
+          <InvestorImage imgSrc={"nansen.svg"} />
+          <InvestorImage imgSrc={"revolut.svg"} />
+          <InvestorImage imgSrc={"sequoia.svg"} />
+          <InvestorImage imgSrc={"solana.svg"} />
+          <InvestorImage imgSrc={"temasek.svg"} />
+          <InvestorImage imgSrc={"wise.svg"} />
         </InvestorImages>
       </AboutContainer>
     </div>
