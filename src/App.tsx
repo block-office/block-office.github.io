@@ -35,7 +35,7 @@ const RainbowContainer = styled.div`
 `;
 
 const CurveContainer = styled.div`
-  background-image: url("img/curve.svg");
+  background-image: url("img/curve-light.svg");
   background-position: top center;
   background-size: cover;
   position: relative;
@@ -45,6 +45,10 @@ const CurveContainer = styled.div`
 
   @media ${breakpoint.xs} {
     top: -270px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-image: url("img/curve-dark.svg");
   }
 `;
 
