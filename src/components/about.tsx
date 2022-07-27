@@ -39,11 +39,6 @@ const InvestorImage = styled.img<{ imgSrc: string }>`
   }
 }`;
 
-function getInvestorImage(svg: string) {
-  var prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  return prefersDarkScheme ? "img/partners/dark/" + svg : "img/partners/light/" + svg;
-}
-
 export const AboutV2 = () => {
   return (
     <div id="about">
