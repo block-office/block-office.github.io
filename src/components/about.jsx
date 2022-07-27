@@ -1,29 +1,55 @@
 import styled from "styled-components";
 
 import { breakpoint } from "../breakpoints";
+import { ColorKey, getColor } from "../colors";
 
 const AboutContainer = styled.div`
-  // background: linear-gradient(to right, #7fc4fd 0%, #5f8dfd 100%);
-
-  color: #fff;
   @media ${breakpoint.md} {
     padding: 5em 0 5em 0;
   }
+  display: flex;
+  flex-direction: column;
   align-items: center;
+`;
+
+const AboutText = styled.div`
+  font-variant: small-caps;
+  color: ${getColor(ColorKey.PRIMARY)};
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-size: 1.25em;
+`;
+
+const InvestorImages = styled.div`
+  display: flex;
+  width: 70%;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const InvestorImage = styled.img`
+  // margin: 2em;
 `;
 
 export const AboutV2 = (props) => {
   return (
     <div id="about">
       <AboutContainer>
-        <div className="col-12 col-md-5 col-lg-3">
-          <h2 className="white">About Us</h2>
-        </div>
-        <div className="col-12 col-md-7 col-lg-9">
-          <div className="about-text">
-            <p>Some about paragraph here.</p>
-          </div>
-        </div>
+        <AboutText>backed by investors from</AboutText>
+        <InvestorImages>
+          <InvestorImage src="img/partners/accel.svg" />
+          <InvestorImage src="img/partners/atomico.svg" />
+          <InvestorImage src="img/partners/coinbase.svg" />
+          <InvestorImage src="img/partners/draper.svg" />
+          <InvestorImage src="img/partners/kkr.svg" />
+          <InvestorImage src="img/partners/nansen.svg" />
+          <InvestorImage src="img/partners/revolut.svg" />
+          <InvestorImage src="img/partners/sequoia.svg" />
+          <InvestorImage src="img/partners/solana.svg" />
+          <InvestorImage src="img/partners/temasek.svg" />
+          <iInvestorImagemg src="img/partners/wise.svg" />
+        </InvestorImages>
       </AboutContainer>
     </div>
   );

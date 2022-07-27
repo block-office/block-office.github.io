@@ -1,6 +1,4 @@
-import { AiOutlineMail } from "react-icons/ai";
 import styled from "styled-components";
-import { breakpoint } from "../breakpoints";
 import { COLORS } from "../colors";
 
 const ContactContainer = styled.div`
@@ -22,7 +20,7 @@ const EmailInput = styled.input`
   margin: 0 1em 0 1em;
   background: none;
   border: 0;
-
+  size: 100;
   &:focus {
     outline: none;
   }
@@ -43,11 +41,11 @@ const CTA = styled.button`
   color: #fff;
 `;
 
-export const Contact = (props) => {
+export const Contact = () => {
   return (
     <ContactContainer>
       <EmailBox>
-        <EmailInput placeholder="Enter email address" />
+        <EmailInput placeholder="Enter email address" size={35} />
         <CTA>Join waitlist</CTA>
       </EmailBox>
     </ContactContainer>

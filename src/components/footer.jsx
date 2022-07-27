@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  padding: 2em 0;
+  display: flex;
+  justify-content: center;
 `;
 
-export const Footer = (props) => {
+const today = new Date();
+
+export const Footer = () => {
   return (
     <FooterContainer id="footer">
-      <div className="footer-container text-center">
-        <p>&copy; 2021 Biosphere Investment Group, LLC</p>
-      </div>
+      <span>Copyright &copy; {today.getFullYear()} Block Office</span>
     </FooterContainer>
   );
 };
