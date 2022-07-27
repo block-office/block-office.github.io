@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { COLORS } from "../colors";
+import { breakpoint } from "../breakpoints";
 
 const ContactContainer = styled.div`
   display: flex;
@@ -41,11 +42,19 @@ const CTA = styled.button`
   color: #fff;
 `;
 
+function getInputSize() {
+  const query = window.matchMedia(breakpoint.xs);
+  if (query.matches) {
+    return 25;
+  }
+  return 35;
+}
+
 export const Contact = () => {
   return (
     <ContactContainer>
       <EmailBox>
-        <EmailInput placeholder="Enter email address" size={35} />
+        <EmailInput placeholder="Enter email address" size={getInputSize()} />
         <CTA>Join waitlist</CTA>
       </EmailBox>
     </ContactContainer>

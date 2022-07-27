@@ -5,7 +5,7 @@ import { ColorKey, getColor } from "../colors";
 
 const AboutContainer = styled.div`
   @media ${breakpoint.md} {
-    padding: 5em 0 5em 0;
+    padding: 3em 0 0 0;
   }
   display: flex;
   flex-direction: column;
@@ -26,6 +26,7 @@ const InvestorImages = styled.div`
   gap: 2em;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 1em;
 `;
 
 const InvestorImage = styled.img`

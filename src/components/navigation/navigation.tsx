@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { COLORS } from "../../colors";
 import { NavBrand } from "./navbrand";
 
+import { breakpoint } from "../../breakpoints";
+
 const NavFixedPosition = styled.div`
-  // position: fixed;
   width: 100%;
-  // max-width: 1440px;
   top: 0;
 `;
 const NavContainer = styled.nav`
@@ -34,6 +34,13 @@ const Nav = ({ left, right }: { left: React.ReactNode; right: React.ReactNode })
   );
 };
 
+const NavLinks = styled.div`
+  display: flex;
+  @media ${breakpoint.xs} {
+    display: none;
+  }
+`;
+
 const NavLink = styled.a`
   display: flex;
   align-items: center;
@@ -41,7 +48,7 @@ const NavLink = styled.a`
   font-size: 16px;
   font-weight: 300;
   border-radius: 0;
-  margin: 0em 1.5em 0 0;
+  margin-left: 1.5em;
   text-decoration: none;
 `;
 
@@ -56,12 +63,12 @@ export const Navigation = () => {
     <Nav
       left={<NavBrand />}
       right={
-        <>
+        <NavLinks>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#contact">
             <NavCTA>Join waitlist</NavCTA>
           </NavLink>
-        </>
+        </NavLinks>
       }
     />
   );

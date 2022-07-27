@@ -1,13 +1,20 @@
 import styled from "styled-components";
+import { breakpoint } from "../breakpoints";
 
 const SplashContainer = styled.div`
-  margin: 12rem 0 0;
+  margin: 12em 0 0;
+  @media ${breakpoint.xs} {
+    margin: 8rem 0 0;
+  }
+  display: flex;
+  justify-content: center;
 `;
 
 const SplashTextContainer = styled.div`
   display: block;
   text-align: center;
   color: #fff;
+  width: 90%;
 `;
 
 const TagLine = styled.div`
