@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { COLORS } from "../../colors";
 import { NavBrand } from "./navbrand";
 
-const NavFixedPositon = styled.div`
+const NavFixedPosition = styled.div`
   // position: fixed;
   width: 100%;
   // max-width: 1440px;
@@ -25,12 +25,12 @@ const NavRight = styled.nav`
 
 const Nav = ({ left, right }: { left: React.ReactNode; right: React.ReactNode }) => {
   return (
-    <NavFixedPositon>
+    <NavFixedPosition>
       <NavContainer>
         <NavLeft>{left}</NavLeft>
         <NavRight>{right}</NavRight>
       </NavContainer>
-    </NavFixedPositon>
+    </NavFixedPosition>
   );
 };
 
