@@ -37,7 +37,7 @@ const RainbowContainer = styled.div`
 const CurveContainer = styled.div`
   background-image: url("img/curve-light.svg");
   background-position: top center;
-  background-size: cover;
+  background-size: auto 100vw;
   position: relative;
   top: -200px;
   padding-top: 50px;
