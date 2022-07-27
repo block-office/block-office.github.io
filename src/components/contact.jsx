@@ -1,53 +1,55 @@
 import { AiOutlineMail } from "react-icons/ai";
 import styled from "styled-components";
 import { breakpoint } from "../breakpoints";
+import { COLORS } from "../colors";
 
 const ContactContainer = styled.div`
-  background: linear-gradient(to right, #7fc4fd 0%, #5f8dfd 100%);
-  color: #fff;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em 0 2em 0;
+`;
 
-  padding: 5em 3em 3em;
-  @media ${breakpoint.md} {
-    padding: 5em 8em;
+const EmailBox = styled.div`
+  background: #fff;
+  border-radius: 0.2em;
+  display: flex;
+  padding: 0.25em;
+  justify-content: space-between;
+`;
+
+const EmailInput = styled.input`
+  color: #000;
+  margin: 0 1em 0 1em;
+  background: none;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #bababa;
+    font-family: "Heebo", sans-serif;
+    font-weight: 300;
   }
 `;
 
-const ContactContent = styled.div`
+const CTA = styled.button`
+  padding: 0.75em 2em;
+  border-radius: 0.2em;
+  background: ${COLORS.NAVY};
   display: flex;
   align-items: center;
-  font-size: 16px;
+  color: #fff;
 `;
 
-const MailTo = styled.a`
-  text-decoration: none;
-  color: inherit;
-
-  &:hover {
-    color: inherit;
-  }
-`;
-
-export const ContactV2 = (props) => {
+export const Contact = (props) => {
   return (
-    <div id="contact">
-      <ContactContainer>
-        <div className="row justify-content-center align-items-center">
-          <div className="col-12 col-md-4">
-            <h2 className="white">Get In Touch</h2>
-          </div>
-          <div className="col-12 col-md-8">
-            <div className="about-text">
-              <ContactContent>
-                <AiOutlineMail />
-                <span className="contact-item">
-                  <MailTo href="mailto:email@email.com">email@email.com</MailTo>
-                </span>
-              </ContactContent>
-            </div>
-          </div>
-        </div>
-      </ContactContainer>
-    </div>
+    <ContactContainer>
+      <EmailBox>
+        <EmailInput placeholder="Enter email address" />
+        <CTA>Join waitlist</CTA>
+      </EmailBox>
+    </ContactContainer>
   );
 };

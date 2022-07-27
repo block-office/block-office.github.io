@@ -3,14 +3,13 @@ import styled from "styled-components";
 import { breakpoint } from "../breakpoints";
 
 const AboutContainer = styled.div`
-  background: linear-gradient(to right, #7fc4fd 0%, #5f8dfd 100%);
+  // background: linear-gradient(to right, #7fc4fd 0%, #5f8dfd 100%);
+
   color: #fff;
-  padding: 5em 3em;
   @media ${breakpoint.md} {
-    padding: 5em 8em;
+    padding: 5em 0 5em 0;
   }
-  align-items: center
-  margin: 7em 0 0 0;
+  align-items: center;
 `;
 
 export const AboutV2 = (props) => {
