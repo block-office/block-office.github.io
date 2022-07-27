@@ -6,7 +6,7 @@ import { Footer } from "./components/footer";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import styled from "styled-components";
-import { ColorKey, COLORS, getColor } from "./colors";
+import { ColorKey, getColor } from "./colors";
 import { useBackgroundColor } from "./hooks/useBackgroundColor";
 import { useTextColor } from "./hooks/useTextColor";
 
