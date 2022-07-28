@@ -22,10 +22,11 @@ const AboutText = styled.div`
 
 const InvestorImages = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70%;
   gap: 2em;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: 1em;
 `;
 
@@ -46,13 +47,13 @@ export const AboutV2 = () => {
         <AboutText>backed by investors from</AboutText>
         <InvestorImages>
           <InvestorImage imgSrc={"accel.svg"} />
-          <InvestorImage imgSrc={"atomico.svg"} />
+          <InvestorImage imgSrc={"blockdaemon.svg"} />
           <InvestorImage imgSrc={"coinbase.svg"} />
           <InvestorImage imgSrc={"draper.svg"} />
+          <InvestorImage imgSrc={"ey.svg"} />
           <InvestorImage imgSrc={"kkr.svg"} />
-          <InvestorImage imgSrc={"nansen.svg"} />
+          <InvestorImage imgSrc={"nansen.png"} height={"40px"} />
           <InvestorImage imgSrc={"revolut.svg"} />
-          <InvestorImage imgSrc={"sequoia.svg"} />
           <InvestorImage imgSrc={"solana.svg"} />
           <InvestorImage imgSrc={"temasek.svg"} />
           <InvestorImage imgSrc={"wise.svg"} />
