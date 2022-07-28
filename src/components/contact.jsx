@@ -8,7 +8,7 @@ const ContactContainer = styled.div`
   padding: 2em 0 2em 0;
 `;
 
-const EmailBox = styled.div`
+const EmailFormBox = styled.form`
   background: #fff;
   border-radius: 4px;
   display: flex;
@@ -53,10 +53,10 @@ function getInputSize() {
 export const Contact = () => {
   return (
     <ContactContainer>
-      <EmailBox>
-        <EmailInput placeholder="Enter email address" size={getInputSize()} />
-        <CTA>Join waitlist</CTA>
-      </EmailBox>
+      <EmailFormBox action="https://getform.io/f/df6ce6ea-44dd-4f44-9bd5-5365a060920c" method="POST">
+        <EmailInput type="email" name="email" placeholder="Enter email address" size={getInputSize()} />
+        <CTA type="submit">Join waitlist</CTA>
+      </EmailFormBox>
     </ContactContainer>
   );
 };
