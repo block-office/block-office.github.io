@@ -10,7 +10,7 @@ const ContactContainer = styled.div`
 
 const EmailBox = styled.div`
   background: #fff;
-  border-radius: 0.2em;
+  border-radius: 4px;
   display: flex;
   padding: 0.25em;
   justify-content: space-between;
@@ -35,7 +35,7 @@ const EmailInput = styled.input`
 
 const CTA = styled.button`
   padding: 0.75em 2em;
-  border-radius: 0.2em;
+  border-radius: 4px;
   background: ${COLORS.NAVY};
   display: flex;
   align-items: center;

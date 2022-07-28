@@ -54,7 +54,7 @@ const NavLink = styled.a`
 
 const NavCTA = styled.div`
   padding: 0.8em 2em;
-  border-radius: 0.2em;
+  border-radius: 4px;
   background: ${COLORS.NAVY};
 `;
 
