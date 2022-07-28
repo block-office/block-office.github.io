@@ -1,6 +1,9 @@
 import styled from "styled-components";
-import { COLORS } from "../colors";
+import { ColorKey, COLORS, getColor } from "../colors";
 import { breakpoint } from "../breakpoints";
+import { validateEmail } from "../email-validate";
+import { useForm } from "../hooks/useForm";
+import { useState } from "react";
 
 const ContactContainer = styled.div`
   display: flex;
@@ -40,6 +43,11 @@ const CTA = styled.button`
   display: flex;
   align-items: center;
   color: #fff;
+
+  &:disabled {
+    background: ${getColor(ColorKey.SUCCESS)};
+    border: 0;
+  }
 `;
 
 function getInputSize() {
@@ -51,11 +59,46 @@ function getInputSize() {
 }
 
 export const Contact = () => {
+  const [submitSuccess, setSuccessfullySubmitted] = useState(false);
+  const { handleSubmit, handleChange, data } = useForm({
+    validations: {
+      email: {
+        custom: {
+          isValid: validateEmail,
+          message: "Please type a valid email"
+        }
+      }
+    },
+    onSubmit: async () => {
+      const { email } = data;
+      const URL = "https://getform.io/f/df6ce6ea-44dd-4f44-9bd5-5365a060920c";
+      const formData = new FormData();
+      formData.append("email", email);
+
+      await fetch(URL, {
+        method: "POST",
+        body: formData
+      });
+      setSuccessfullySubmitted(true);
+    },
+    initialValues: { email: "" }
+  });
+
   return (
     <ContactContainer>
-      <EmailFormBox action="https://getform.io/f/df6ce6ea-44dd-4f44-9bd5-5365a060920c" method="POST">
-        <EmailInput type="email" name="email" placeholder="Enter email address" size={getInputSize()} />
-        <CTA type="submit">Join waitlist</CTA>
+      <EmailFormBox onSubmit={handleSubmit}>
+        <EmailInput
+          type="email"
+          name="email"
+          placeholder="Enter email address"
+          value={data.email || ""}
+          size={getInputSize()}
+          onChange={handleChange("email")}
+          required
+        />
+        <CTA type="submit" disabled={submitSuccess}>
+          {submitSuccess ? "Thanks!" : "Join waitlist"}
+        </CTA>
       </EmailFormBox>
     </ContactContainer>
   );
