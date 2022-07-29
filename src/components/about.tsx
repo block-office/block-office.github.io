@@ -54,7 +54,7 @@ export const AboutV2 = () => {
           <InvestorImage imgSrc={"kkr.svg"} />
           <InvestorImage imgSrc={"nansen.png"} height={"40px"} />
           <InvestorImage imgSrc={"revolut.svg"} />
-          <InvestorImage imgSrc={"solana.svg"} />
+          <InvestorImage imgSrc={"stripe.svg"} />
           <InvestorImage imgSrc={"temasek.svg"} />
           <InvestorImage imgSrc={"wise.svg"} />
         </InvestorImages>
