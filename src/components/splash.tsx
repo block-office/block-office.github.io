@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { breakpoint } from "../breakpoints";
+import { FontKey, getFont } from "../fonts";
 
 const SplashContainer = styled.div`
   margin: 12em 0 0;
@@ -20,7 +21,7 @@ const SplashTextContainer = styled.div`
 const TagLine = styled.div`
   font-size: 3.25em;
   font-weight: 500;
-  font-family: "Lexend Deca";
+  font-family: ${getFont(FontKey.HEADING)};
 `;
 
 const OneLiner = styled.div`

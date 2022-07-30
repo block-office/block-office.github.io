@@ -4,6 +4,7 @@ import { breakpoint } from "../breakpoints";
 import { validateEmail } from "../email-validate";
 import { useForm } from "../hooks/useForm";
 import { useState } from "react";
+import { FontKey, getFont } from "../fonts";
 
 const ContactContainer = styled.div`
   display: flex;
@@ -31,8 +32,8 @@ const EmailInput = styled.input`
 
   &::placeholder {
     color: #bababa;
-    font-family: "Heebo", sans-serif;
-    font-weight: 300;
+    font-family: ${getFont(FontKey.BODY)};
+    font-weight: 400;
   }
 `;
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FontKey, getFont } from "../../fonts";
 
 const NavBrandLink = styled.a`
   text-decoration: none;
@@ -13,7 +14,7 @@ const NavBrandTextContainer = styled.div`
 const NavBrandText = styled.div`
   font-size: 24px;
   font-weight: 500;
-  font-family: "Lexend Deca";
+  font-family: ${getFont(FontKey.HEADING)};
   color: #fff;
 `;
 
