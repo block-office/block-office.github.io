@@ -37,12 +37,14 @@ const EmailInput = styled.input`
 `;
 
 const CTA = styled.button`
-  padding: 0.75em 2em;
+  padding: 0.75em 1.75em;
   border-radius: 4px;
   background: ${COLORS.NAVY};
   display: flex;
   align-items: center;
   color: #fff;
+  font-weight: 500;
+  border: 0;
 
   &:disabled {
     background: ${getColor(ColorKey.SUCCESS)};
@@ -85,7 +87,7 @@ export const Contact = () => {
   });
 
   return (
-    <ContactContainer>
+    <ContactContainer id="contact">
       <EmailFormBox onSubmit={handleSubmit}>
         <EmailInput
           type="email"

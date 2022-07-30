@@ -34,7 +34,7 @@ export const Splash = () => {
     <SplashContainer>
       <SplashTextContainer>
         <TagLine>Your dedicated back office</TagLine>
-        <OneLiner>We simplify the complexity and hassle of managing your own team</OneLiner>
+        <OneLiner>We handle all your web2 and web3 corporate services, accounting, tax, and audit needs</OneLiner>
       </SplashTextContainer>
     </SplashContainer>
   );
