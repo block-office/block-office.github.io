@@ -15,7 +15,7 @@ const AboutContainer = styled.div`
 const AboutText = styled.div`
   font-variant: small-caps;
   color: ${getColor(ColorKey.PRIMARY)};
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
   font-weight: 400;
   font-size: 1.25em;
 `;
@@ -50,7 +50,7 @@ export const AboutV2 = () => {
           <InvestorImage imgSrc={"blockdaemon.svg"} />
           <InvestorImage imgSrc={"coinbase.svg"} />
           <InvestorImage imgSrc={"draper.svg"} />
-          <InvestorImage imgSrc={"ey.svg"} />
+          <InvestorImage imgSrc={"ey.svg"} height={"45px"} />
           <InvestorImage imgSrc={"kkr.svg"} />
           <InvestorImage imgSrc={"nansen.png"} height={"40px"} />
           <InvestorImage imgSrc={"revolut.svg"} />

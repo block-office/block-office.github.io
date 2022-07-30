@@ -20,6 +20,7 @@ const SplashTextContainer = styled.div`
 const TagLine = styled.div`
   font-size: 3.25em;
   font-weight: 500;
+  font-family: "Lexend Deca";
 `;
 
 const OneLiner = styled.div`
