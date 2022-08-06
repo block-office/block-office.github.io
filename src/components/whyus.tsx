@@ -8,10 +8,18 @@ const WhyUsContainer = styled.div`
     padding: 7em 0 12em 0;
     margin: -5em 0 0 0;
   }
+  @media ${breakpoint.xs} {
+    padding: 7em 0 12em 0;
+    margin: -9em 0 0 0;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${getColor(ColorKey.BACKGROUND2)};
+`;
+
+const WhyUsTextContainer = styled.div`
+  width: 90%;
 `;
 
 const WhyUsHeading = styled.div`
@@ -20,16 +28,19 @@ const WhyUsHeading = styled.div`
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 1.75em;
+  text-align: center;
 `;
 
 const WhyUsList = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 80%;
   gap: 2em;
   flex-wrap: wrap;
   margin-top: 3em;
+  @media ${breakpoint.xs} {
+    width: 100%;
+  }
 `;
 
 const ServiceItemContainer = styled.div`
@@ -38,6 +49,10 @@ const ServiceItemContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 30%;
+
+  @media ${breakpoint.xs} {
+    width: 100%;
+  }
 `;
 
 const ServiceItemImage = styled.img<{ imgSrc: string }>`
@@ -80,8 +95,8 @@ export const ServiceItem = ({
 
 export const WhyUs = () => {
   return (
-    <div id="whyus">
-      <WhyUsContainer>
+    <WhyUsContainer id="whyus">
+      <WhyUsTextContainer>
         <WhyUsHeading>Why high growth companies and funds prefer BlockOffice</WhyUsHeading>
         <WhyUsList>
           <ServiceItem imageSrc="support.svg" heading={"Experienced and specialized support"}>
@@ -99,7 +114,7 @@ export const WhyUs = () => {
             fund, or a profitable enterprise, we'll be at your back supporting your every need.
           </ServiceItem>
         </WhyUsList>
-      </WhyUsContainer>
-    </div>
+      </WhyUsTextContainer>
+    </WhyUsContainer>
   );
 };

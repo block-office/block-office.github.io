@@ -8,10 +8,18 @@ const ServicesContainer = styled.div`
     padding: 7em 0 5em 0;
     margin: -5em 0 0 0;
   }
+  @media ${breakpoint.xs} {
+    padding: 7em 0 5em 0;
+    margin: -5em 0 0 0;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${getColor(ColorKey.BACKGROUND)};
+`;
+
+const ServicesTextContainer = styled.div`
+  width: 90%;
 `;
 
 const ServicesHeading = styled.div`
@@ -20,16 +28,20 @@ const ServicesHeading = styled.div`
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 1.75em;
+  text-align: center;
 `;
 
 const ServicesList = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 80%;
   gap: 2em;
   flex-wrap: wrap;
   margin-top: 3em;
+
+  @media ${breakpoint.xs} {
+    width: 100%;
+  }
 `;
 
 const ServiceItemContainer = styled.div`
@@ -38,6 +50,10 @@ const ServiceItemContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 30%;
+
+  @media ${breakpoint.xs} {
+    width: 100%;
+  }
 `;
 
 const ServiceItemHeading = styled.span`
@@ -61,8 +77,8 @@ export const ServiceItem = ({ heading, children }: { heading: string; children: 
 
 export const Services = () => {
   return (
-    <div id="services">
-      <ServicesContainer>
+    <ServicesContainer id="services">
+      <ServicesTextContainer>
         <ServicesHeading>Focus on sales, we have your back covered</ServicesHeading>
         <ServicesList>
           <ServiceItem heading={"Expert CFO services"}>
@@ -90,7 +106,7 @@ export const Services = () => {
             terms? Our liquidation as-a-service will help you find closure.
           </ServiceItem>
         </ServicesList>
-      </ServicesContainer>
-    </div>
+      </ServicesTextContainer>
+    </ServicesContainer>
   );
 };
