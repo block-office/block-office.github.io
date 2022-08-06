@@ -11,12 +11,12 @@ const WhyUsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${getColor(ColorKey.PRIMARY)};
+  background-color: ${getColor(ColorKey.BACKGROUND2)};
 `;
 
 const WhyUsHeading = styled.div`
   font-variant: small-caps;
-  color: ${getColor(ColorKey.BACKGROUND)};
+  color: ${getColor(ColorKey.PRIMARY)};
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 1.75em;
@@ -42,22 +42,22 @@ const ServiceItemContainer = styled.div`
 
 const ServiceItemImage = styled.img<{ imgSrc: string }>`
 @media (prefers-color-scheme: dark) {
-  content: url('img/whyus/light/${(props) => props.imgSrc}')
+  content: url('img/whyus/dark/${(props) => props.imgSrc}')
 }
 
 @media (prefers-color-scheme: light) {
-  content: url('img/whyus/dark/${(props) => props.imgSrc}')
+  content: url('img/whyus/light/${(props) => props.imgSrc}')
   }
 }`;
 
 const ServiceItemHeading = styled.span`
   font-weight: 500;
-  color: ${getColor(ColorKey.BACKGROUND)};
+  color: ${getColor(ColorKey.PRIMARY)};
 `;
 
 const ServiceItemBody = styled.span`
   text-align: center;
-  color: ${getColor(ColorKey.BACKGROUND)};
+  color: ${getColor(ColorKey.PRIMARY)};
 `;
 
 export const ServiceItem = ({

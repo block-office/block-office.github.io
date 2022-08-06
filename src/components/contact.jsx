@@ -7,12 +7,12 @@ import { useState } from "react";
 import { FontKey, getFont } from "../fonts";
 
 const ContactContainer = styled.div`
-  background-color: ${getColor(ColorKey.PRIMARY)};
+  background-color: ${getColor(ColorKey.BACKGROUND2)};
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5em 0 5em 0;
-  color: ${getColor(ColorKey.BACKGROUND)};
+  color: ${getColor(ColorKey.PRIMARY)};
 `;
 
 const ContactHeader = styled.span`
@@ -53,10 +53,10 @@ const EmailInput = styled.input`
 const CTA = styled.button`
   padding: 0.75em 1.75em;
   border-radius: 4px;
-  background: ${COLORS.NAVY};
+  background: ${COLORS.LIGHT_BLUE};
   display: flex;
   align-items: center;
-  color: #fff;
+  color: ${getColor(ColorKey.PRIMARY)};
   font-weight: 500;
   border: 0;
 
@@ -114,10 +114,10 @@ export const Contact = () => {
             onChange={handleChange("email")}
             required
           />
-          <CTA type="submit" disabled={submitSuccess}>
-            {submitSuccess ? "Thanks!" : "Join waitlist"}
-          </CTA>
         </EmailFormBox>
+        <CTA type="submit" disabled={submitSuccess}>
+          {submitSuccess ? "Thanks!" : "Join waitlist"}
+        </CTA>
       </ContactFormContainer>
     </ContactContainer>
   );
