@@ -30,7 +30,7 @@ export const useForm = <T extends Record<keyof T, any> = {}>(options?: {
   // Needs to extend unknown so we can add a generic to an arrow function
   const handleChange =
     <S extends unknown>(key: keyof T, sanitizeFn?: (value: string) => S) =>
-    (e: ChangeEvent<HTMLInputElement & HTMLSelectElement>) => {
+    (e: ChangeEvent<HTMLInputElement & HTMLSelectElement & HTMLTextAreaElement>) => {
       const value = sanitizeFn ? sanitizeFn(e.target.value) : e.target.value;
       setData({
         ...data,
