@@ -23,9 +23,7 @@ const ServicesTextContainer = styled.div`
 `;
 
 const ServicesHeading = styled.div`
-  font-variant: small-caps;
   color: ${getColor(ColorKey.PRIMARY)};
-  letter-spacing: 1px;
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -35,7 +33,7 @@ const ServicesList = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  gap: 2em;
+  gap: 4em;
   flex-wrap: wrap;
   margin-top: 3em;
 
@@ -49,7 +47,7 @@ const ServiceItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 28%;
 
   @media ${breakpoint.xs} {
     width: 100%;
@@ -62,8 +60,10 @@ const ServiceItemHeading = styled.span`
 `;
 
 const ServiceItemBody = styled.span`
-  text-align: center;
-  color: ${getColor(ColorKey.PRIMARY)};
+  text-align: left;
+  margin-top: 1.25em;
+  line-height: 1.5em;
+  color: ${getColor(ColorKey.PRIMARY2)};
 `;
 
 export const ServiceItem = ({ heading, children }: { heading: string; children: React.ReactNode }) => {

@@ -1,5 +1,6 @@
 export enum ColorKey {
   PRIMARY = "PRIMARY",
+  PRIMARY2 = "PRIMARY2",
   BACKGROUND = "BACKGROUND",
   BACKGROUND2 = "BACKGROUND2",
   SUCCESS = "SUCCESS"
@@ -18,6 +19,7 @@ export const COLORS = {
 
 export const LIGHT_COLORS: ColorPalette = {
   PRIMARY: "#15214B",
+  PRIMARY2: "#656D8C",
   BACKGROUND: "#FFFFFF",
   BACKGROUND2: "#15214B",
   SUCCESS: "#1F8C1D"
@@ -25,6 +27,7 @@ export const LIGHT_COLORS: ColorPalette = {
 
 export const DARK_COLORS: ColorPalette = {
   PRIMARY: "#FFFFFF",
+  PRIMARY2: "#CED3E4",
   BACKGROUND: "#15214B",
   BACKGROUND2: "#6E78A6",
   SUCCESS: "#1F8C1D"

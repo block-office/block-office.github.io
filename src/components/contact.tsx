@@ -15,8 +15,11 @@ const ContactContainer = styled.div`
 `;
 
 const ContactHeader = styled.span`
-  font-weight: 700;
   color: ${getColor(ColorKey.PRIMARY)};
+
+  font-weight: 700;
+  font-size: 1.75em;
+  text-align: center;
 `;
 
 const ContactFormContainer = styled.div`
@@ -50,6 +53,11 @@ const EmailInput = styled.input`
   margin: 0.25em 0.5em;
   background: none;
   border: 0;
+
+  font-family: ${getFont(FontKey.BODY)};
+  font-weight: 400;
+  font-size: 13px;
+
   &:focus {
     outline: none;
   }
@@ -67,6 +75,11 @@ const SubjectInput = styled.input`
   margin: 0.25em 0.5em;
   background: none;
   border: 0;
+
+  font-family: ${getFont(FontKey.BODY)};
+  font-weight: 400;
+  font-size: 13px;
+
   &:focus {
     outline: none;
   }
@@ -79,11 +92,15 @@ const SubjectInput = styled.input`
 `;
 
 const MessageInput = styled.textarea`
-  size: 200;
   color: #000;
-  margin: 0.25em 0.5em;
+  margin: 0.25rem 0.5rem;
   background: none;
   border: 0;
+
+  font-family: ${getFont(FontKey.BODY)};
+  font-weight: 400;
+  font-size: 13px;
+
   &:focus {
     outline: none;
   }

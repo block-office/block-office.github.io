@@ -23,9 +23,7 @@ const WhyUsTextContainer = styled.div`
 `;
 
 const WhyUsHeading = styled.div`
-  font-variant: small-caps;
   color: ${getColor(ColorKey.PRIMARY)};
-  letter-spacing: 1px;
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -35,7 +33,7 @@ const WhyUsList = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  gap: 2em;
+  gap: 4em;
   flex-wrap: wrap;
   margin-top: 3em;
   @media ${breakpoint.xs} {
@@ -48,7 +46,7 @@ const ServiceItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 28%;
 
   @media ${breakpoint.xs} {
     width: 100%;
@@ -66,12 +64,15 @@ const ServiceItemImage = styled.img<{ imgSrc: string }>`
 }`;
 
 const ServiceItemHeading = styled.span`
-  font-weight: 500;
+  font-weight: 700;
+  margin-top: 1.25em;
   color: ${getColor(ColorKey.PRIMARY)};
 `;
 
 const ServiceItemBody = styled.span`
   text-align: center;
+  margin-top: 1.25em;
+  line-height: 1.5em;
   color: ${getColor(ColorKey.PRIMARY)};
 `;
 
