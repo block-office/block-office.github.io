@@ -91,7 +91,7 @@ export const Services = () => {
           </ServiceItem>
           <ServiceItem heading={"Tax"}>
             Our tax specialists help you navigate tax laws to optimize and file taxes with the appropriate tax
-            authroities efficiently.
+            authorities efficiently.
           </ServiceItem>
           <ServiceItem heading={"Bookkeeping"}>
             Entrust your bills and invoices to our Web3 accounting professionals. We'll tidy it up and provide you a
@@ -102,7 +102,7 @@ export const Services = () => {
             routine transactions.
           </ServiceItem>
           <ServiceItem heading={"Closing a company"}>
-            Require legal help to close a subsidiary, strike off a company, file for bankrupcy, or re-negotiate debt
+            Require legal help to close a subsidiary, strike off a company, file for bankruptcy, or re-negotiate debt
             terms? Our liquidation as-a-service will help you find closure.
           </ServiceItem>
         </ServicesList>

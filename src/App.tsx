@@ -54,8 +54,6 @@ const CurveContainer = styled.div`
   }
 `;
 
-const ServicesContainer = styled.div``;
-
 const NoHorizontal = styled.div``;
 
 const App = () => {

@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../../colors";
 import { NavBrand } from "./navbrand";
 
 import { breakpoint } from "../../breakpoints";
-import { Signup } from "../signup/signup";
+import { SignUp } from "../signUp/signUp";
 
 const NavFixedPosition = styled.div`
   width: 100%;
@@ -53,7 +52,7 @@ const NavLink = styled.a`
   text-decoration: none;
 `;
 
-const SignupContainer = styled.div`
+const SignUpContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 1.5em;
@@ -66,9 +65,9 @@ export const Navigation = () => {
       right={
         <NavLinks>
           <NavLink href="#about">About</NavLink>
-          <SignupContainer>
-            <Signup />
-          </SignupContainer>
+          <SignUpContainer>
+            <SignUp />
+          </SignUpContainer>
         </NavLinks>
       }
     />

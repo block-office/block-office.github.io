@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ColorKey, COLORS, getColor } from "../colors";
+import { ColorKey, getColor } from "../colors";
 import { breakpoint } from "../breakpoints";
 import { validateEmail } from "../email-validate";
 import { useForm } from "../hooks/useForm";

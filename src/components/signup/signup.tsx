@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { COLORS } from "../../colors";
 
-const SignupLink = styled.a`
+const SignUpLink = styled.a`
   color: #fff;
   font-size: 16px;
   font-weight: 300;
@@ -10,17 +10,17 @@ const SignupLink = styled.a`
   text-decoration: none;
 `;
 
-const SignupCTA = styled.div`
+const SignUpCTA = styled.div`
   padding: 0.75em 1.75em;
   border-radius: 4px;
   background: ${COLORS.NAVY};
   font-weight: 500;
 `;
 
-export const Signup = () => {
+export const SignUp = () => {
   return (
-    <SignupLink href="#contact">
-      <SignupCTA>Learn More</SignupCTA>
-    </SignupLink>
+    <SignUpLink href="#contact">
+      <SignUpCTA>Learn More</SignUpCTA>
+    </SignUpLink>
   );
 };
