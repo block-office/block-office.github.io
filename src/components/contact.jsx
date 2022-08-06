@@ -7,6 +7,19 @@ import { useState } from "react";
 import { FontKey, getFont } from "../fonts";
 
 const ContactContainer = styled.div`
+  background-color: ${getColor(ColorKey.PRIMARY)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em 0 5em 0;
+  color: ${getColor(ColorKey.BACKGROUND)};
+`;
+
+const ContactHeader = styled.span`
+  font-weight: 700;
+`;
+
+const ContactFormContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 2em 0 2em 0;
@@ -89,20 +102,23 @@ export const Contact = () => {
 
   return (
     <ContactContainer id="contact">
-      <EmailFormBox onSubmit={handleSubmit}>
-        <EmailInput
-          type="email"
-          name="email"
-          placeholder="Enter email address"
-          value={data.email || ""}
-          size={getInputSize()}
-          onChange={handleChange("email")}
-          required
-        />
-        <CTA type="submit" disabled={submitSuccess}>
-          {submitSuccess ? "Thanks!" : "Join waitlist"}
-        </CTA>
-      </EmailFormBox>
+      <ContactHeader>Be the first to experience BlockOffice</ContactHeader>
+      <ContactFormContainer>
+        <EmailFormBox onSubmit={handleSubmit}>
+          <EmailInput
+            type="email"
+            name="email"
+            placeholder="Enter email address"
+            value={data.email || ""}
+            size={getInputSize()}
+            onChange={handleChange("email")}
+            required
+          />
+          <CTA type="submit" disabled={submitSuccess}>
+            {submitSuccess ? "Thanks!" : "Join waitlist"}
+          </CTA>
+        </EmailFormBox>
+      </ContactFormContainer>
     </ContactContainer>
   );
 };

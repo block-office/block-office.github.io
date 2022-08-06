@@ -4,6 +4,7 @@ import { COLORS } from "../../colors";
 import { NavBrand } from "./navbrand";
 
 import { breakpoint } from "../../breakpoints";
+import { Signup } from "../signup/signup";
 
 const NavFixedPosition = styled.div`
   width: 100%;
@@ -52,11 +53,10 @@ const NavLink = styled.a`
   text-decoration: none;
 `;
 
-const NavCTA = styled.div`
-  padding: 0.75em 1.75em;
-  border-radius: 4px;
-  background: ${COLORS.NAVY};
-  font-weight: 500;
+const SignupContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em;
 `;
 
 export const Navigation = () => {
@@ -66,9 +66,9 @@ export const Navigation = () => {
       right={
         <NavLinks>
           <NavLink href="#about">About</NavLink>
-          <NavLink href="#contact">
-            <NavCTA>Join waitlist</NavCTA>
-          </NavLink>
+          <SignupContainer>
+            <Signup />
+          </SignupContainer>
         </NavLinks>
       }
     />
