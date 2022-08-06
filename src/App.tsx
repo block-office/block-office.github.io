@@ -1,6 +1,8 @@
 import { Navigation } from "./components/navigation/navigation";
 import { Splash } from "./components/splash";
-import { AboutV2 } from "./components/about";
+import { About } from "./components/about";
+import { WhyUs } from "./components/whyus";
+import { Services } from "./components/services";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import SmoothScroll from "smooth-scroll";
@@ -52,6 +54,8 @@ const CurveContainer = styled.div`
   }
 `;
 
+const ServicesContainer = styled.div``;
+
 const NoHorizontal = styled.div``;
 
 const App = () => {
@@ -64,18 +68,24 @@ const App = () => {
           <BoundingBox maxWidth={maxPageWidth}>
             <Navigation />
             <Splash />
-            <Contact />
           </BoundingBox>
         </CenteredPageContainer>
       </RainbowContainer>
       <CurveContainer>
         <CenteredPageContainer>
           <BoundingBox maxWidth={maxPageWidth}>
-            <AboutV2 />
-            <Footer />
+            <About />
           </BoundingBox>
         </CenteredPageContainer>
       </CurveContainer>
+      <CenteredPageContainer>
+        <BoundingBox maxWidth={maxPageWidth}>
+          <WhyUs />
+          <Services />
+          <Contact />
+          <Footer />
+        </BoundingBox>
+      </CenteredPageContainer>
     </NoHorizontal>
   );
 };

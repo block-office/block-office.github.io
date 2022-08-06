@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "../breakpoints";
 import { FontKey, getFont } from "../fonts";
+import { Signup } from "./signup/signup";
 
 const SplashContainer = styled.div`
   margin: 12em 0 0;
@@ -30,12 +31,22 @@ const OneLiner = styled.div`
   margin-top: 1em;
 `;
 
+const SignupContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+`;
+
 export const Splash = () => {
   return (
     <SplashContainer>
       <SplashTextContainer>
         <TagLine>Your dedicated back office</TagLine>
         <OneLiner>We handle all your web2 and web3 corporate services, accounting, tax, and audit needs</OneLiner>
+        <SignupContainer>
+          <Signup />
+        </SignupContainer>
       </SplashTextContainer>
     </SplashContainer>
   );

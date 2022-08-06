@@ -40,7 +40,7 @@ const InvestorImage = styled.img<{ imgSrc: string }>`
   }
 }`;
 
-export const AboutV2 = () => {
+export const About = () => {
   return (
     <div id="about">
       <AboutContainer>
