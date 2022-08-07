@@ -5,17 +5,18 @@ import { ColorKey, getColor } from "../colors";
 
 const WhyUsContainer = styled.div`
   @media ${breakpoint.md} {
-    padding: 5em 0 10em 0;
+    padding: 5em 0 5em 0;
     margin: -5em 0 0 0;
   }
   @media ${breakpoint.xs} {
-    padding: 5em 0 10em 0;
+    padding: 5em 0 5em 0;
     margin: -9em 0 0 0;
   }
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${getColor(ColorKey.Background2)};
+  border-radius: 26px;
 `;
 
 const WhyUsTextContainer = styled.div`

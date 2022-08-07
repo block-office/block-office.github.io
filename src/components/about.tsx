@@ -18,6 +18,7 @@ const AboutText = styled.div`
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 1.25em;
+  margin-bottom: 1.5em;
 `;
 
 const InvestorImages = styled.div`

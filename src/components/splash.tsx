@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { breakpoint } from "../breakpoints";
+import { COLORS } from "../colors";
 import { FontKey, getFont } from "../fonts";
 import { SignUp } from "./signup/signup";
 
 const SplashContainer = styled.div`
   margin: 12em 0 0;
   @media ${breakpoint.xs} {
-    margin: 8rem 0 0;
+    margin: 5rem 0 0;
   }
   display: flex;
   justify-content: center;
@@ -15,19 +16,19 @@ const SplashContainer = styled.div`
 const SplashTextContainer = styled.div`
   display: block;
   text-align: center;
-  color: #fff;
+  color: ${COLORS.NAVY};
   width: 90%;
 `;
 
 const TagLine = styled.div`
   font-size: 3.25em;
-  font-weight: 500;
+  font-weight: 700;
   font-family: ${getFont(FontKey.HEADING)};
 `;
 
 const OneLiner = styled.div`
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 500;
   margin-top: 1em;
 `;
 

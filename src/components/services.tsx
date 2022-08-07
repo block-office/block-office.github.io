@@ -1,21 +1,20 @@
 import styled from "styled-components";
 
 import { breakpoint } from "../breakpoints";
-import { ColorKey, getColor } from "../colors";
+import { ColorKey, COLORS, getColor } from "../colors";
 
 const ServicesContainer = styled.div`
   @media ${breakpoint.md} {
     padding: 5em 0 5em 0;
-    margin: -5em 0 0 0;
+    margin: 0;
   }
   @media ${breakpoint.xs} {
     padding: 5em 0 5em 0;
-    margin: -5em 0 0 0;
+    margin: 0;
   }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${getColor(ColorKey.Background)};
 `;
 
 const ServicesTextContainer = styled.div`
@@ -23,7 +22,7 @@ const ServicesTextContainer = styled.div`
 `;
 
 const ServicesHeading = styled.div`
-  color: ${getColor(ColorKey.Primary1A)};
+  color: ${COLORS.NEON_GREEN};
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -35,7 +34,7 @@ const ServicesList = styled.div`
   align-items: start;
   gap: 4em;
   flex-wrap: wrap;
-  margin-top: 3em;
+  margin-top: 3.5em;
 
   @media ${breakpoint.xs} {
     width: 100%;

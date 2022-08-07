@@ -18,7 +18,8 @@ export const COLORS = {
   NAVY: "#15214B",
   WHITE: "#FFFFFF",
   BLACK: "#000000",
-  LIGHT_BLUE: "#22eedd"
+  LIGHT_BLUE: "#22eedd",
+  NEON_GREEN: "#00FFA3"
 };
 
 export const LIGHT_COLORS: ColorPalette = {
@@ -27,22 +28,22 @@ export const LIGHT_COLORS: ColorPalette = {
   Primary2A: "#15214B",
   Primary2B: "#656D8C",
   Background: "#15214B",
-  Background2: "#FFFFFF",
-  NoticePrimary: "#000000",
-  NoticeBackground: "#ECD444",
-  Success: "#1FFF78"
+  Background2: "#00FFA3",
+  NoticePrimary: "#15214B",
+  NoticeBackground: "#00D1FF",
+  Success: "##00FFA3"
 };
 
 export const DARK_COLORS: ColorPalette = {
   Primary1A: "#FFFFFF",
   Primary1B: "#CED3E4",
-  Primary2A: "#FFFFFF",
-  Primary2B: "#CED3E4",
+  Primary2A: "#15214B",
+  Primary2B: "#15214B",
   Background: "#15214B",
-  Background2: "#24387F",
-  NoticePrimary: "#000000",
-  NoticeBackground: "#EBCF33",
-  Success: "#1FFF78"
+  Background2: "#00FFA3",
+  NoticePrimary: "#15214B",
+  NoticeBackground: "#00D1FF",
+  Success: "##00FFA3"
 };
 
 export function getColor(colorKey: keyof ColorPalette) {

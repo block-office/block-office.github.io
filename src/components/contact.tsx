@@ -7,7 +7,6 @@ import { useState } from "react";
 import { FontKey, getFont } from "../fonts";
 
 const ContactContainer = styled.div`
-  background-color: ${getColor(ColorKey.Background2)};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +14,7 @@ const ContactContainer = styled.div`
 `;
 
 const ContactHeader = styled.span`
-  color: ${getColor(ColorKey.Primary2A)};
+  color: ${getColor(ColorKey.Primary1A)};
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
