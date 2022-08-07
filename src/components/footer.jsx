@@ -3,8 +3,7 @@ import styled from "styled-components";
 const FooterContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 1em;
-  padding-top: 10em;
+  margin: 1em 0;
 `;
 
 const today = new Date();

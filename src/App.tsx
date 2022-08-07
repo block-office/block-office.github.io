@@ -1,6 +1,8 @@
 import { Navigation } from "./components/navigation/navigation";
 import { Splash } from "./components/splash";
-import { AboutV2 } from "./components/about";
+import { About } from "./components/about";
+import { WhyUs } from "./components/whyus";
+import { Services } from "./components/services";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import SmoothScroll from "smooth-scroll";
@@ -35,28 +37,24 @@ const RainbowContainer = styled.div`
 `;
 
 const CurveContainer = styled.div`
-  background-image: url("img/curve-light.svg");
+  background-image: url("img/curve-dark.svg");
   background-position: top center;
   background-size: auto 100vw;
   position: relative;
-  top: -200px;
+  top: -175px;
   padding-top: 50px;
   width: 100vw;
 
   @media ${breakpoint.xs} {
     top: -270px;
   }
-
-  @media (prefers-color-scheme: dark) {
-    background-image: url("img/curve-dark.svg");
-  }
 `;
 
 const NoHorizontal = styled.div``;
 
 const App = () => {
-  useBackgroundColor(getColor(ColorKey.BACKGROUND));
-  useTextColor(getColor(ColorKey.PRIMARY));
+  useBackgroundColor(getColor(ColorKey.Background));
+  useTextColor(getColor(ColorKey.Primary1A));
   return (
     <NoHorizontal>
       <RainbowContainer>
@@ -64,18 +62,24 @@ const App = () => {
           <BoundingBox maxWidth={maxPageWidth}>
             <Navigation />
             <Splash />
-            <Contact />
           </BoundingBox>
         </CenteredPageContainer>
       </RainbowContainer>
       <CurveContainer>
         <CenteredPageContainer>
           <BoundingBox maxWidth={maxPageWidth}>
-            <AboutV2 />
-            <Footer />
+            <About />
           </BoundingBox>
         </CenteredPageContainer>
       </CurveContainer>
+      <CenteredPageContainer>
+        <BoundingBox maxWidth={maxPageWidth}>
+          <WhyUs />
+          <Services />
+          <Contact />
+          <Footer />
+        </BoundingBox>
+      </CenteredPageContainer>
     </NoHorizontal>
   );
 };

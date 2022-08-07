@@ -14,7 +14,7 @@ const AboutContainer = styled.div`
 
 const AboutText = styled.div`
   font-variant: small-caps;
-  color: ${getColor(ColorKey.PRIMARY)};
+  color: ${getColor(ColorKey.Primary1A)};
   letter-spacing: 1px;
   font-weight: 400;
   font-size: 1.25em;
@@ -31,16 +31,10 @@ const InvestorImages = styled.div`
 `;
 
 const InvestorImage = styled.img<{ imgSrc: string }>`
-@media (prefers-color-scheme: dark) {
-  content: url('img/partners/dark/${(props) => props.imgSrc}')
-}
+  content: url("img/partners/dark/${(props) => props.imgSrc}");
+`;
 
-@media (prefers-color-scheme: light) {
-  content: url('img/partners/light/${(props) => props.imgSrc}')
-  }
-}`;
-
-export const AboutV2 = () => {
+export const About = () => {
   return (
     <div id="about">
       <AboutContainer>

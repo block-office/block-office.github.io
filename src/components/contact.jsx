@@ -48,7 +48,7 @@ const CTA = styled.button`
   border: 0;
 
   &:disabled {
-    background: ${getColor(ColorKey.SUCCESS)};
+    background: ${getColor(ColorKey.Success)};
     border: 0;
   }
 `;

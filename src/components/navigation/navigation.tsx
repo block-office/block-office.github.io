@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { COLORS } from "../../colors";
 import { NavBrand } from "./navbrand";
 
 import { breakpoint } from "../../breakpoints";
+import { SignUp } from "../signUp/signUp";
 
 const NavFixedPosition = styled.div`
   width: 100%;
@@ -52,11 +52,10 @@ const NavLink = styled.a`
   text-decoration: none;
 `;
 
-const NavCTA = styled.div`
-  padding: 0.75em 1.75em;
-  border-radius: 4px;
-  background: ${COLORS.NAVY};
-  font-weight: 500;
+const SignUpContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em;
 `;
 
 export const Navigation = () => {
@@ -66,9 +65,10 @@ export const Navigation = () => {
       right={
         <NavLinks>
           <NavLink href="#about">About</NavLink>
-          <NavLink href="#contact">
-            <NavCTA>Join waitlist</NavCTA>
-          </NavLink>
+          <NavLink href="#services">Services</NavLink>
+          <SignUpContainer>
+            <SignUp />
+          </SignUpContainer>
         </NavLinks>
       }
     />
