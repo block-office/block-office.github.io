@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const FloatingFractal = styled.img`
   position: absolute;
+  z-index: -1;
 `;
 
 export const LeftFractal = () => (
