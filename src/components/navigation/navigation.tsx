@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { NavBrand } from "./navbrand";
 
 import { breakpoint } from "../../breakpoints";
-import { SignUp } from "../signUp/signUp";
+import { SignUp } from "../signup/signup";
 
 const NavFixedPosition = styled.div`
   width: 100%;

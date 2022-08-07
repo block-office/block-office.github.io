@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "../breakpoints";
 import { FontKey, getFont } from "../fonts";
-import { SignUp } from "./signUp/signUp";
+import { SignUp } from "./signup/signup";
 
 const SplashContainer = styled.div`
   margin: 12em 0 0;
