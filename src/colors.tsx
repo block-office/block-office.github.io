@@ -42,7 +42,7 @@ export const DARK_COLORS: ColorPalette = {
   Background: "#15214B",
   Background2: "#00FFA3",
   NoticePrimary: "#15214B",
-  NoticeBackground: "#00D1FF",
+  NoticeBackground: "#00FFA3",
   Success: "##00FFA3"
 };
 

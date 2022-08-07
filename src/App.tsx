@@ -12,6 +12,7 @@ import { ColorKey, getColor } from "./colors";
 import { useBackgroundColor } from "./hooks/useBackgroundColor";
 import { useTextColor } from "./hooks/useTextColor";
 import { breakpoint } from "./breakpoints";
+import { LeftFractal, RightFractal } from "./components/floatingFractals";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 750,
@@ -74,9 +75,13 @@ const App = () => {
       </CurveContainer>
       <CenteredPageContainer>
         <BoundingBox maxWidth={maxPageWidth}>
+          <LeftFractal />
           <WhyUs />
+          <RightFractal />
           <Services />
-          <Contact />
+          <CenteredPageContainer>
+            <Contact />
+          </CenteredPageContainer>
           <Footer />
         </BoundingBox>
       </CenteredPageContainer>

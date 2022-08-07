@@ -4,27 +4,21 @@ import { breakpoint } from "../breakpoints";
 import { ColorKey, getColor } from "../colors";
 
 const WhyUsContainer = styled.div`
-  @media ${breakpoint.md} {
-    padding: 5em 0 5em 0;
-    margin: -5em 0 0 0;
-  }
   @media ${breakpoint.xs} {
-    padding: 5em 0 5em 0;
     margin: -9em 0 0 0;
   }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${getColor(ColorKey.Background2)};
-  border-radius: 26px;
 `;
 
 const WhyUsTextContainer = styled.div`
   width: 90%;
+  margin-top: 2em;
 `;
 
 const WhyUsHeading = styled.div`
-  color: ${getColor(ColorKey.Primary2A)};
+  color: ${getColor(ColorKey.Primary1A)};
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -55,27 +49,25 @@ const ServiceItemContainer = styled.div`
 `;
 
 const ServiceItemImage = styled.img<{ imgSrc: string }>`
-@media (prefers-color-scheme: dark) {
-  content: url('img/whyus/dark/${(props) => props.imgSrc}')
-}
-
-@media (prefers-color-scheme: light) {
-  content: url('img/whyus/light/${(props) => props.imgSrc}')
-  }
-}`;
+  content: url("img/whyus/dark/${(props) => props.imgSrc}");
+`;
 
 const ServiceItemHeading = styled.span`
   font-weight: 600;
   font-size: 18px;
   margin-top: 1.25em;
-  color: ${getColor(ColorKey.Primary2A)};
+  color: ${getColor(ColorKey.Primary1A)};
 `;
 
 const ServiceItemBody = styled.span`
   text-align: center;
   margin-top: 1.25em;
   line-height: 1.5em;
-  color: ${getColor(ColorKey.Primary2B)};
+  color: ${getColor(ColorKey.Primary1B)};
+`;
+
+const Rectangle = styled.img`
+  content: url("img/rectangle.svg");
 `;
 
 export const ServiceItem = ({
@@ -99,6 +91,7 @@ export const ServiceItem = ({
 export const WhyUs = () => {
   return (
     <WhyUsContainer id="whyus">
+      <Rectangle />
       <WhyUsTextContainer>
         <WhyUsHeading>Why high growth companies and funds prefer BlockOffice</WhyUsHeading>
         <WhyUsList>

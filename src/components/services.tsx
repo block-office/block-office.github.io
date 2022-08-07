@@ -4,14 +4,7 @@ import { breakpoint } from "../breakpoints";
 import { ColorKey, COLORS, getColor } from "../colors";
 
 const ServicesContainer = styled.div`
-  @media ${breakpoint.md} {
-    padding: 5em 0 5em 0;
-    margin: 0;
-  }
-  @media ${breakpoint.xs} {
-    padding: 5em 0 5em 0;
-    margin: 0;
-  }
+  margin: 9em 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,10 +12,11 @@ const ServicesContainer = styled.div`
 
 const ServicesTextContainer = styled.div`
   width: 90%;
+  margin-top: 2em;
 `;
 
 const ServicesHeading = styled.div`
-  color: ${COLORS.NEON_GREEN};
+  color: ${getColor(ColorKey.Primary1A)};
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -45,7 +39,7 @@ const ServiceItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   width: 28%;
 
   @media ${breakpoint.xs} {
@@ -66,10 +60,25 @@ const ServiceItemBody = styled.span`
   color: ${getColor(ColorKey.Primary1B)};
 `;
 
-export const ServiceItem = ({ heading, children }: { heading: string; children: React.ReactNode }) => {
+const ServiceItemBullet = styled.span`
+  color: ${COLORS.NEON_GREEN};
+`;
+
+const Rectangle = styled.img`
+  content: url("img/rectangle.svg");
+`;
+
+const Bullet = () => {
+  return <ServiceItemBullet>⯀ </ServiceItemBullet>;
+};
+
+const ServiceItem = ({ heading, children }: { heading: string; children: React.ReactNode }) => {
   return (
     <ServiceItemContainer>
-      <ServiceItemHeading>{heading}</ServiceItemHeading>
+      <ServiceItemHeading>
+        <Bullet />
+        {heading}
+      </ServiceItemHeading>
       <ServiceItemBody>{children}</ServiceItemBody>
     </ServiceItemContainer>
   );
@@ -78,6 +87,7 @@ export const ServiceItem = ({ heading, children }: { heading: string; children: 
 export const Services = () => {
   return (
     <ServicesContainer id="services">
+      <Rectangle />
       <ServicesTextContainer>
         <ServicesHeading>Focus on sales, we have your back covered</ServicesHeading>
         <ServicesList>

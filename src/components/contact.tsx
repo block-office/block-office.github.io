@@ -10,7 +10,15 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5em 0 5em 0;
+  padding: 3em 4em;
+  margin-top: 5em;
+  background-image: url("img/banner.svg");
+  border-radius: 24px;
+  width: 50%;
+
+  @media ${breakpoint.xs} {
+    width: 100%;
+  }
 `;
 
 const ContactHeader = styled.span`
@@ -25,7 +33,7 @@ const ContactFormContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 2em;
+  padding: 2em 0 0 0;
   gap: 1em;
 `;
 
@@ -35,7 +43,7 @@ const FormBox = styled.div<{ width: string }>`
   display: flex;
   padding: 0.25em;
   justify-content: space-between;
-  border: 1px solid black;
+
   width: ${(props) => props.width};
 `;
 
