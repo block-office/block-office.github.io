@@ -1,9 +1,13 @@
 export enum ColorKey {
-  PRIMARY = "PRIMARY",
-  PRIMARY2 = "PRIMARY2",
-  BACKGROUND = "BACKGROUND",
-  BACKGROUND2 = "BACKGROUND2",
-  SUCCESS = "SUCCESS"
+  Primary1A = "Primary1A",
+  Primary1B = "Primary1B",
+  Primary2A = "Primary2A",
+  Primary2B = "Primary2B",
+  Background = "Background",
+  Background2 = "Background2",
+  NoticePrimary = "NoticePrimary",
+  NoticeBackground = "NoticeBackground",
+  Success = "Success"
 }
 
 export type ColorPalette = {
@@ -18,19 +22,27 @@ export const COLORS = {
 };
 
 export const LIGHT_COLORS: ColorPalette = {
-  PRIMARY: "#15214B",
-  PRIMARY2: "#656D8C",
-  BACKGROUND: "#FFFFFF",
-  BACKGROUND2: "#15214B",
-  SUCCESS: "#1F8C1D"
+  Primary1A: "#FFFFFF",
+  Primary1B: "#CED3E4",
+  Primary2A: "#15214B",
+  Primary2B: "#656D8C",
+  Background: "#15214B",
+  Background2: "#FFFFFF",
+  NoticePrimary: "#000000",
+  NoticeBackground: "#ECD444",
+  Success: "#1FFF78"
 };
 
 export const DARK_COLORS: ColorPalette = {
-  PRIMARY: "#FFFFFF",
-  PRIMARY2: "#CED3E4",
-  BACKGROUND: "#15214B",
-  BACKGROUND2: "#6E78A6",
-  SUCCESS: "#1F8C1D"
+  Primary1A: "#FFFFFF",
+  Primary1B: "#CED3E4",
+  Primary2A: "#FFFFFF",
+  Primary2B: "#CED3E4",
+  Background: "#15214B",
+  Background2: "#24387F",
+  NoticePrimary: "#000000",
+  NoticeBackground: "#EBCF33",
+  Success: "#1FFF78"
 };
 
 export function getColor(colorKey: keyof ColorPalette) {

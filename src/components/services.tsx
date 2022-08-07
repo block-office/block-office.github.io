@@ -5,17 +5,17 @@ import { ColorKey, getColor } from "../colors";
 
 const ServicesContainer = styled.div`
   @media ${breakpoint.md} {
-    padding: 7em 0 5em 0;
+    padding: 5em 0 5em 0;
     margin: -5em 0 0 0;
   }
   @media ${breakpoint.xs} {
-    padding: 7em 0 5em 0;
+    padding: 5em 0 5em 0;
     margin: -5em 0 0 0;
   }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${getColor(ColorKey.BACKGROUND)};
+  background-color: ${getColor(ColorKey.Background)};
 `;
 
 const ServicesTextContainer = styled.div`
@@ -23,7 +23,7 @@ const ServicesTextContainer = styled.div`
 `;
 
 const ServicesHeading = styled.div`
-  color: ${getColor(ColorKey.PRIMARY)};
+  color: ${getColor(ColorKey.Primary1A)};
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -55,15 +55,16 @@ const ServiceItemContainer = styled.div`
 `;
 
 const ServiceItemHeading = styled.span`
-  font-weight: 500;
-  color: ${getColor(ColorKey.PRIMARY)};
+  font-weight: 600;
+  font-size: 18px;
+  color: ${getColor(ColorKey.Primary1A)};
 `;
 
 const ServiceItemBody = styled.span`
   text-align: left;
   margin-top: 1.25em;
   line-height: 1.5em;
-  color: ${getColor(ColorKey.PRIMARY2)};
+  color: ${getColor(ColorKey.Primary1B)};
 `;
 
 export const ServiceItem = ({ heading, children }: { heading: string; children: React.ReactNode }) => {

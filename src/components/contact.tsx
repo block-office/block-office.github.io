@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ColorKey, getColor } from "../colors";
+import { ColorKey, COLORS, getColor } from "../colors";
 import { breakpoint } from "../breakpoints";
 import { validateEmail } from "../email-validate";
 import { useForm } from "../hooks/useForm";
@@ -7,7 +7,7 @@ import { useState } from "react";
 import { FontKey, getFont } from "../fonts";
 
 const ContactContainer = styled.div`
-  background-color: ${getColor(ColorKey.BACKGROUND2)};
+  background-color: ${getColor(ColorKey.Background2)};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +15,7 @@ const ContactContainer = styled.div`
 `;
 
 const ContactHeader = styled.span`
-  color: ${getColor(ColorKey.PRIMARY)};
-
+  color: ${getColor(ColorKey.Primary2A)};
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -27,17 +26,17 @@ const ContactFormContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 2em 0 2em 0;
+  padding: 2em;
   gap: 1em;
 `;
 
 const FormBox = styled.div<{ width: string }>`
-  background: #fff;
+  background: ${COLORS.WHITE};
   border-radius: 4px;
   display: flex;
   padding: 0.25em;
   justify-content: space-between;
-  border: 0;
+  border: 1px solid black;
   width: ${(props) => props.width};
 `;
 
@@ -48,7 +47,6 @@ const FormInputs = styled.div`
 `;
 
 const EmailInput = styled.input`
-  size: 100;
   color: #000;
   margin: 0.25em 0.5em;
   background: none;
@@ -66,11 +64,11 @@ const EmailInput = styled.input`
     color: #bababa;
     font-family: ${getFont(FontKey.BODY)};
     font-weight: 400;
+    font-size: 14px;
   }
 `;
 
 const SubjectInput = styled.input`
-  size: 200;
   color: #000;
   margin: 0.25em 0.5em;
   background: none;
@@ -88,6 +86,7 @@ const SubjectInput = styled.input`
     color: #bababa;
     font-family: ${getFont(FontKey.BODY)};
     font-weight: 400;
+    font-size: 14px;
   }
 `;
 
@@ -109,6 +108,7 @@ const MessageInput = styled.textarea`
     color: #bababa;
     font-family: ${getFont(FontKey.BODY)};
     font-weight: 400;
+    font-size: 14px;
   }
 `;
 
@@ -116,15 +116,15 @@ const CTA = styled.button`
   padding: 0.75em 1.75em;
   margin-top: 1em;
   border-radius: 4px;
-  background: ${getColor(ColorKey.BACKGROUND)};
+  background: ${getColor(ColorKey.NoticeBackground)};
   display: flex;
   align-items: center;
-  color: ${getColor(ColorKey.PRIMARY)};
+  color: ${getColor(ColorKey.NoticePrimary)};
   font-weight: 500;
   border: 0;
 
   &:disabled {
-    background: ${getColor(ColorKey.SUCCESS)};
+    background: ${getColor(ColorKey.Success)};
     border: 0;
   }
 `;
@@ -177,7 +177,7 @@ export const Contact = () => {
               <EmailInput
                 type="email"
                 name="email"
-                placeholder="Enter email address"
+                placeholder="What's your email address?"
                 value={(data.email || "") as string}
                 size={getInputSize()}
                 onChange={handleChange("email")}
@@ -188,7 +188,7 @@ export const Contact = () => {
               <SubjectInput
                 type="text"
                 name="subject"
-                placeholder="Subject"
+                placeholder="Who do you represent?"
                 value={(data.subject || "") as string}
                 size={getInputSize()}
                 onChange={handleChange("subject")}
@@ -198,7 +198,7 @@ export const Contact = () => {
             <FormBox width="25em">
               <MessageInput
                 name="message"
-                placeholder="Message to BlockOffice!"
+                placeholder="Which particular use cases are you interested in?"
                 value={(data.message || "") as string}
                 onChange={handleChange("message")}
                 cols={150}

@@ -37,28 +37,24 @@ const RainbowContainer = styled.div`
 `;
 
 const CurveContainer = styled.div`
-  background-image: url("img/curve-light.svg");
+  background-image: url("img/curve-dark.svg");
   background-position: top center;
   background-size: auto 100vw;
   position: relative;
-  top: -200px;
+  top: -175px;
   padding-top: 50px;
   width: 100vw;
 
   @media ${breakpoint.xs} {
     top: -270px;
   }
-
-  @media (prefers-color-scheme: dark) {
-    background-image: url("img/curve-dark.svg");
-  }
 `;
 
 const NoHorizontal = styled.div``;
 
 const App = () => {
-  useBackgroundColor(getColor(ColorKey.BACKGROUND));
-  useTextColor(getColor(ColorKey.PRIMARY));
+  useBackgroundColor(getColor(ColorKey.Background));
+  useTextColor(getColor(ColorKey.Primary1A));
   return (
     <NoHorizontal>
       <RainbowContainer>

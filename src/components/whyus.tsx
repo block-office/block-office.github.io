@@ -5,17 +5,17 @@ import { ColorKey, getColor } from "../colors";
 
 const WhyUsContainer = styled.div`
   @media ${breakpoint.md} {
-    padding: 7em 0 12em 0;
+    padding: 5em 0 10em 0;
     margin: -5em 0 0 0;
   }
   @media ${breakpoint.xs} {
-    padding: 7em 0 12em 0;
+    padding: 5em 0 10em 0;
     margin: -9em 0 0 0;
   }
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${getColor(ColorKey.BACKGROUND2)};
+  background-color: ${getColor(ColorKey.Background2)};
 `;
 
 const WhyUsTextContainer = styled.div`
@@ -23,7 +23,7 @@ const WhyUsTextContainer = styled.div`
 `;
 
 const WhyUsHeading = styled.div`
-  color: ${getColor(ColorKey.PRIMARY)};
+  color: ${getColor(ColorKey.Primary2A)};
   font-weight: 700;
   font-size: 1.75em;
   text-align: center;
@@ -64,16 +64,17 @@ const ServiceItemImage = styled.img<{ imgSrc: string }>`
 }`;
 
 const ServiceItemHeading = styled.span`
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 18px;
   margin-top: 1.25em;
-  color: ${getColor(ColorKey.PRIMARY)};
+  color: ${getColor(ColorKey.Primary2A)};
 `;
 
 const ServiceItemBody = styled.span`
   text-align: center;
   margin-top: 1.25em;
   line-height: 1.5em;
-  color: ${getColor(ColorKey.PRIMARY)};
+  color: ${getColor(ColorKey.Primary2B)};
 `;
 
 export const ServiceItem = ({
