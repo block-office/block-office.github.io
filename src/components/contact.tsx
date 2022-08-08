@@ -10,7 +10,7 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3em 4em;
+  padding: 3em 0em;
   margin-top: 5em;
   background-image: url("img/banner.svg");
   border-radius: 24px;
@@ -41,7 +41,7 @@ const FormBox = styled.div<{ width: string }>`
   background: ${COLORS.WHITE};
   border-radius: 4px;
   display: flex;
-  padding: 0.25em;
+  padding: 0.25em 0;
   justify-content: space-between;
 
   width: ${(props) => props.width};
@@ -180,7 +180,7 @@ export const Contact = () => {
       <ContactFormContainer>
         <form onSubmit={handleSubmit}>
           <FormInputs>
-            <FormBox width="15em">
+            <FormBox width="75%">
               <EmailInput
                 type="email"
                 name="email"
@@ -191,7 +191,7 @@ export const Contact = () => {
                 required
               />
             </FormBox>
-            <FormBox width="25em">
+            <FormBox width="100%">
               <SubjectInput
                 type="text"
                 name="subject"
@@ -202,7 +202,7 @@ export const Contact = () => {
                 required
               />
             </FormBox>
-            <FormBox width="25em">
+            <FormBox width="22em">
               <MessageInput
                 name="message"
                 placeholder="Which particular use cases are you interested in?"
