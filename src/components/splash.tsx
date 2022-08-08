@@ -16,7 +16,7 @@ const SplashContainer = styled.div`
 const SplashTextContainer = styled.div`
   display: block;
   text-align: center;
-  color: ${COLORS.NAVY};
+  color: ${COLORS.WHITE};
   width: 90%;
 `;
 

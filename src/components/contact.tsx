@@ -176,7 +176,7 @@ export const Contact = () => {
 
   return (
     <ContactContainer id="contact">
-      <ContactHeader>Be the first to experience BlockOffice</ContactHeader>
+      <ContactHeader>Get in touch today!</ContactHeader>
       <ContactFormContainer>
         <form onSubmit={handleSubmit}>
           <FormInputs>

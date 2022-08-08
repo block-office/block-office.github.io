@@ -31,7 +31,7 @@ const CenteredPageContainer = styled.div`
 `;
 
 const RainbowContainer = styled.div`
-  background-image: url("img/splash.svg");
+  background-image: url("img/banner.svg");
   background-size: cover;
   padding-bottom: 300px;
   width: 100vw;
