@@ -56,6 +56,7 @@ const ServiceItemHeading = styled.span`
   font-weight: 600;
   font-size: 18px;
   margin-top: 1.25em;
+  text-align: center;
   color: ${getColor(ColorKey.Primary1A)};
 `;
 
@@ -93,21 +94,21 @@ export const WhyUs = () => {
     <WhyUsContainer id="whyus">
       <Rectangle />
       <WhyUsTextContainer>
-        <WhyUsHeading>Why high growth companies and funds prefer BlockOffice</WhyUsHeading>
+        <WhyUsHeading>Why choose BlockOffice?</WhyUsHeading>
         <WhyUsList>
           <ServiceItem imageSrc="support.svg" heading={"Experienced and specialized support"}>
-            Our web3 accounting and finance specialists are ex-Big 4 senior executives dedicated to supporting you in
-            achieving organizational success. Employ a BlockOffice team that understands your unique business,
-            accounting standards, and local regulations.
+            Our web3 accounting and finance specialists are ex-big 4 and from other reputable firms, dedicated to
+            supporting you in achieving organizational success. Employ a BlockOffice team that understands your unique
+            business, accounting standards, and local regulations
           </ServiceItem>
-          <ServiceItem imageSrc="founders.svg" heading={"Ex-founders and startup DNA"}>
+          <ServiceItem imageSrc="founders.svg" heading={"Startup DNA"}>
             Our co-founders and early employees have founded companies and helped scaled sub-10M valuation companies to
             unicorns. We will hustle with you, helping you get your back office needs sorted out in the quickest and
-            most dedicated manner.
+            most dedicated manner
           </ServiceItem>
           <ServiceItem imageSrc="growing.svg" heading={"Growing with you"}>
             We align our level of support and engagement to your growth needs. Whether you have a high-growth startup, a
-            fund, or a profitable enterprise, we'll be at your back supporting your every need.
+            fund, or a profitable enterprise, we'll be at your back supporting your every need
           </ServiceItem>
         </WhyUsList>
       </WhyUsTextContainer>

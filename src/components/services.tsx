@@ -91,29 +91,29 @@ export const Services = () => {
       <ServicesTextContainer>
         <ServicesHeading>Focus on sales, we have your back covered</ServicesHeading>
         <ServicesList>
-          <ServiceItem heading={"Expert CFO services"}>
+          <ServiceItem heading={"CFO services"}>
             Through strategic financial support including fundraising, advisory services, and more, our dedicated team
-            of experts enable you to achieve your performance objectives.
+            enable you to achieve your performance objectives
           </ServiceItem>
           <ServiceItem heading={"Management accounting"}>
-            Maintain a comprehensive understanding of your company's financial situation. We dissect your historical
-            numbers and provide you a clear analysis to improve topline and profitability.
+            Rely on us to maintain a comprehensive understanding of your company's financial situation. We dissect your
+            historical numbers and provide you a clear analysis to improve topline and profitability
           </ServiceItem>
           <ServiceItem heading={"Tax"}>
             Our tax specialists help you navigate tax laws to optimize and file taxes with the appropriate tax
-            authorities efficiently.
+            authorities efficiently
           </ServiceItem>
           <ServiceItem heading={"Bookkeeping"}>
-            Entrust your bills and invoices to our Web3 accounting professionals. We'll tidy it up and provide you a
-            clear outcome for your company's ledgers.
+            Our accounting team will help you tidy up your bills and invoices, and provide a clear outcome for your
+            company's ledger
           </ServiceItem>
           <ServiceItem heading={"Bank account, web3 wallet, and ledger setup"}>
             We help you optimize treasury operational inefficiencies, avoid unnecessary delays, and prevent mistakes in
-            routine transactions.
+            routine transactions
           </ServiceItem>
           <ServiceItem heading={"Closing a company"}>
-            Require legal help to close a subsidiary, strike off a company, file for bankruptcy, or re-negotiate debt
-            terms? Our liquidation as-a-service will help you find closure.
+            Sometimes things don't go as planned. We help close a subsidiary, strike off a company, file for bankruptcy,
+            or re-negotiate debt terms
           </ServiceItem>
         </ServicesList>
       </ServicesTextContainer>
