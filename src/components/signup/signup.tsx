@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ColorKey, COLORS, getColor } from "../../colors";
+import { ColorKey, getColor } from "../../colors";
 
 const SignUpLink = styled.a`
   color: ${getColor(ColorKey.NoticePrimary)};
