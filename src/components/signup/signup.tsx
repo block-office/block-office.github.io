@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ColorKey, getColor } from "../../colors";
+import { ColorKey, COLORS, getColor } from "../../colors";
 
 const SignUpLink = styled.a`
   color: ${getColor(ColorKey.NoticePrimary)};
@@ -15,6 +15,7 @@ const SignUpCTA = styled.div`
   border-radius: 4px;
   background: ${getColor(ColorKey.NoticeBackground)};
   font-weight: 500;
+  color: ${getColor(ColorKey.NoticePrimary)};
 `;
 
 export const SignUp = () => {

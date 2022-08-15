@@ -13,6 +13,7 @@ import { useBackgroundColor } from "./hooks/useBackgroundColor";
 import { useTextColor } from "./hooks/useTextColor";
 import { breakpoint } from "./breakpoints";
 import { LeftFractal, RightFractal } from "./components/floatingFractals";
+import { CookieConsent } from "./components/cookieConsent";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 750,
@@ -85,6 +86,7 @@ const App = () => {
           <Footer />
         </BoundingBox>
       </CenteredPageContainer>
+      <CookieConsent />
     </NoHorizontal>
   );
 };
