@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { ColorKey, COLORS, getColor } from "../colors";
 import { breakpoint } from "../breakpoints";
 import { validateEmail } from "../email-validate";

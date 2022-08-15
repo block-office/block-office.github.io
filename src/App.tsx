@@ -7,7 +7,7 @@ import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { ColorKey, getColor } from "./colors";
 import { useBackgroundColor } from "./hooks/useBackgroundColor";
 import { useTextColor } from "./hooks/useTextColor";

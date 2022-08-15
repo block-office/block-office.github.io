@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { breakpoint } from "../breakpoints";
 import { COLORS } from "../colors";
 import { FontKey, getFont } from "../fonts";

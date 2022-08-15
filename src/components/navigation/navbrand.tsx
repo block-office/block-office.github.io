@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { FontKey, getFont } from "../../fonts";
 
 const NavBrandLink = styled.a`

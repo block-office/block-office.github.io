@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { ColorKey, getColor } from "../colors";
 
 const FooterContainer = styled.div`
