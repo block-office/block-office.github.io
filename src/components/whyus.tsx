@@ -2,11 +2,15 @@ import styled from "@emotion/styled";
 
 import { breakpoint } from "../breakpoints";
 import { ColorKey, getColor } from "../colors";
+import { HR } from "../stylePrimitives";
 
 const WhyUsContainer = styled.div`
   @media ${breakpoint.xs} {
-    margin: -9em 0 0 0;
+    padding: 2rem 0 2rem 0;
   }
+
+  padding: 5rem 0 5rem 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +45,7 @@ const ServiceItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 28%;
+  width: 29%;
 
   @media ${breakpoint.xs} {
     width: 100%;
@@ -49,7 +53,7 @@ const ServiceItemContainer = styled.div`
 `;
 
 const ServiceItemImage = styled.img<{ imgSrc: string }>`
-  content: url("img/whyus/dark/${(props) => props.imgSrc}");
+  content: url("img/whyus/light/${(props) => props.imgSrc}");
 `;
 
 const ServiceItemHeading = styled.span`
@@ -64,11 +68,7 @@ const ServiceItemBody = styled.span`
   text-align: center;
   margin-top: 1.25em;
   line-height: 1.5em;
-  color: ${getColor(ColorKey.Primary1B)};
-`;
-
-const Rectangle = styled.img`
-  content: url("img/rectangle.svg");
+  color: ${getColor(ColorKey.Primary1A)};
 `;
 
 export const ServiceItem = ({
@@ -91,8 +91,8 @@ export const ServiceItem = ({
 
 export const WhyUs = () => {
   return (
-    <WhyUsContainer id="whyus">
-      <Rectangle />
+    <WhyUsContainer>
+      <HR color={getColor(ColorKey.Primary1A)} />
       <WhyUsTextContainer>
         <WhyUsHeading>Why choose BlockOffice?</WhyUsHeading>
         <WhyUsList>
@@ -101,13 +101,14 @@ export const WhyUs = () => {
             supporting you in achieving organizational success. Employ a BlockOffice team that understands your unique
             business, accounting standards, and local regulations
           </ServiceItem>
-          <ServiceItem imageSrc="founders.svg" heading={"Startup DNA"}>
+          <ServiceItem imageSrc="founders.svg" heading={"Ex-Founders and Startup DNA"}>
             Our co-founders and early employees have founded companies and helped scaled sub-10M valuation companies to
             unicorns. We will hustle with you, helping you get your back office needs sorted out in the quickest and
             most dedicated manner
           </ServiceItem>
           <ServiceItem imageSrc="growing.svg" heading={"Growing with you"}>
-            We align our level of support and engagement to your growth needs. Whether you have a high-growth startup, a
+            It is difficult to navigate changing regulatory requirements for web3 companies and we are here to help. We
+            align our level of support and engagement to your growth needs. Whether you have a high-growth startup, a
             fund, or a profitable enterprise, we'll be at your back supporting your every need
           </ServiceItem>
         </WhyUsList>

@@ -32,7 +32,7 @@ const InvestorImages = styled.div`
 `;
 
 const InvestorImage = styled.img<{ imgSrc: string }>`
-  content: url("img/partners/dark/${(props) => props.imgSrc}");
+  content: url("img/partners/light/${(props) => props.imgSrc}");
 `;
 
 export const About = () => {

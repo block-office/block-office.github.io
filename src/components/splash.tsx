@@ -1,54 +1,74 @@
 import styled from "@emotion/styled";
 import { breakpoint } from "../breakpoints";
-import { COLORS } from "../colors";
+import { ColorKey, COLORS, getColor } from "../colors";
 import { FontKey, getFont } from "../fonts";
 import { SignUp } from "./signup/signup";
 
 const SplashContainer = styled.div`
-  margin: 12em 0 0;
+  margin: 0em 0 0 0;
   @media ${breakpoint.xs} {
-    margin: 5rem 0 0;
+    margin: 0rem 0 0;
   }
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 const SplashTextContainer = styled.div`
   display: block;
-  text-align: center;
-  color: ${COLORS.WHITE};
-  width: 90%;
+  text-align: start;
+  color: ${getColor(ColorKey.Primary1A)};
+  width: 35%;
+  margin-left: 0;
 `;
 
 const TagLine = styled.div`
   font-size: 3.25em;
-  font-weight: 700;
+  font-weight: 500;
   font-family: ${getFont(FontKey.HEADING)};
 `;
 
 const OneLiner = styled.div`
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 500;
   margin-top: 1em;
+  line-height: 1.5em;
 `;
 
 const SignUpContainer = styled.div`
   display: flex;
+  justify-content: start;
+  margin-top: 2em;
+`;
+
+const SplashImageContainer = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2em;
+  margin-right: 2em;
+`;
+
+const SplashImage = styled.img`
+  width: 100%;
 `;
 
 export const Splash = () => {
   return (
     <SplashContainer>
       <SplashTextContainer>
-        <TagLine>Your dedicated back office</TagLine>
-        <OneLiner>We handle all your web3 and web2 corporate services, accounting, tax, and audit needs</OneLiner>
+        <TagLine>Your dedicated</TagLine>
+        <TagLine>Web3 CFO</TagLine>
+        <OneLiner>
+          Setup, accounting, payroll, <br />
+          compliance, tax, and filings
+        </OneLiner>
         <SignUpContainer>
           <SignUp />
         </SignUpContainer>
       </SplashTextContainer>
+      <SplashImageContainer>
+        <SplashImage src="img/banner.png" />
+      </SplashImageContainer>
     </SplashContainer>
   );
 };

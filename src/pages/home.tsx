@@ -1,18 +1,16 @@
 import { Navigation } from "../components/navigation/navigation";
 import { Splash } from "../components/splash";
 import { About } from "../components/about";
+import { Focus } from "../components/focus";
 import { WhyUs } from "../components/whyus";
 import { Services } from "../components/services";
 import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 import SmoothScroll from "smooth-scroll";
-import "./App.css";
 import styled from "@emotion/styled";
 import { ColorKey, getColor } from "../colors";
 import { useBackgroundColor } from "../hooks/useBackgroundColor";
 import { useTextColor } from "../hooks/useTextColor";
-import { breakpoint } from "../breakpoints";
-import { LeftFractal, RightFractal } from "../components/floatingFractals";
 import { CookieConsent } from "../components/cookieConsent";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -31,27 +29,6 @@ const CenteredPageContainer = styled.div`
   align-items: center;
 `;
 
-const RainbowContainer = styled.div`
-  background-image: url("img/banner.svg");
-  background-size: cover;
-  padding-bottom: 300px;
-  width: 100vw;
-`;
-
-const CurveContainer = styled.div`
-  background-image: url("img/curve-dark.svg");
-  background-position: top center;
-  background-size: auto 100vw;
-  position: relative;
-  top: -175px;
-  padding-top: 50px;
-  width: 100vw;
-
-  @media ${breakpoint.xs} {
-    top: -270px;
-  }
-`;
-
 const NoHorizontal = styled.div``;
 
 export const Home = () => {
@@ -59,26 +36,21 @@ export const Home = () => {
   useTextColor(getColor(ColorKey.Primary1A));
   return (
     <NoHorizontal>
-      <RainbowContainer>
-        <CenteredPageContainer>
-          <BoundingBox maxWidth={maxPageWidth}>
-            <Navigation />
-            <Splash />
-          </BoundingBox>
-        </CenteredPageContainer>
-      </RainbowContainer>
-      <CurveContainer>
-        <CenteredPageContainer>
-          <BoundingBox maxWidth={maxPageWidth}>
-            <About />
-          </BoundingBox>
-        </CenteredPageContainer>
-      </CurveContainer>
       <CenteredPageContainer>
         <BoundingBox maxWidth={maxPageWidth}>
-          <LeftFractal />
+          <Navigation />
+          <Splash />
+        </BoundingBox>
+      </CenteredPageContainer>
+      <CenteredPageContainer>
+        <BoundingBox maxWidth={maxPageWidth}>
+          <About />
+          <Focus />
+        </BoundingBox>
+      </CenteredPageContainer>
+      <CenteredPageContainer>
+        <BoundingBox maxWidth={maxPageWidth}>
           <WhyUs />
-          <RightFractal />
           <Services />
           <CenteredPageContainer>
             <Contact />

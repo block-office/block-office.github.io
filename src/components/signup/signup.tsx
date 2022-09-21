@@ -21,7 +21,7 @@ const SignUpCTA = styled.div`
 export const SignUp = () => {
   return (
     <SignUpLink href="#contact">
-      <SignUpCTA>Learn More</SignUpCTA>
+      <SignUpCTA>Get Started</SignUpCTA>
     </SignUpLink>
   );
 };
