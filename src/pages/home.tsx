@@ -3,7 +3,7 @@ import { Splash } from "../components/splash";
 import { About } from "../components/about";
 import { Focus } from "../components/focus";
 import { WhyUs } from "../components/whyus";
-import { Services } from "../components/services";
+import { Offerings } from "../components/offerings";
 import { Contact } from "../components/contact";
 import { Footer } from "../components/footer";
 import SmoothScroll from "smooth-scroll";
@@ -51,7 +51,7 @@ export const Home = () => {
       <CenteredPageContainer>
         <BoundingBox maxWidth={maxPageWidth}>
           <WhyUs />
-          <Services />
+          <Offerings />
           <CenteredPageContainer>
             <Contact />
           </CenteredPageContainer>

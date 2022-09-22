@@ -18,7 +18,6 @@ const WhyUsContainer = styled.div`
 
 const WhyUsTextContainer = styled.div`
   width: 90%;
-  margin-top: 2em;
 `;
 
 const WhyUsHeading = styled.div`

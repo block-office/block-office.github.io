@@ -25,12 +25,17 @@ export const FlexCol = styled.div`
   flex-direction: column;
 `;
 
+export const FlexColC = styled(FlexCol)`
+  align-items: center;
+`;
+
 type ColorProps = {
   color: string;
 };
 
 export const HR = styled.hr<ColorProps>`
   border: 0;
-  border-bottom: 1rem solid ${(props) => props.color};
+  border-bottom: 0.75rem solid ${(props) => props.color};
   width: 5%;
+  margin-bottom: 2rem;
 `;

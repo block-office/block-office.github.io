@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { breakpoint } from "../breakpoints";
 import { ColorKey, getColor } from "../colors";
-import { H2d } from "../stylePrimitives";
+import { H2d, HR } from "../stylePrimitives";
 import { SignUp } from "./signup/signup";
 
 const Container = styled.div`
@@ -54,11 +54,6 @@ const ItemBody = styled.span`
   color: ${getColor(ColorKey.Primary2B)};
 `;
 
-const Rectangle = styled.img`
-  content: url("img/rectangle.svg");
-  margin-bottom: 2rem;
-`;
-
 const SignUpContainer = styled.div`
   display: flex;
   justify-content: start;
@@ -77,7 +72,7 @@ const Item = ({ children }: { children: React.ReactNode }) => {
 export const Focus = () => {
   return (
     <Container>
-      <Rectangle />
+      <HR color={getColor(ColorKey.Primary2A)} />
       <H2d>Focus on growth, we have your back covered</H2d>
       <ContentContainer>
         <ImageContainer>

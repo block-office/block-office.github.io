@@ -7,6 +7,7 @@ export enum ColorKey {
   Background2 = "Background2",
   NoticePrimary = "NoticePrimary",
   NoticeBackground = "NoticeBackground",
+  LogoColor1 = "LogoColor1",
   Success = "Success"
 }
 
@@ -43,6 +44,7 @@ export const DARK_COLORS: ColorPalette = {
   Background2: "#15214B",
   NoticePrimary: "#15214B",
   NoticeBackground: "#00FFA3",
+  LogoColor1: "#00D1FF",
   Success: "#00FFA3"
 };
 
