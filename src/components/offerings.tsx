@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { breakpoint } from "../breakpoints";
 import { ColorKey, getColor } from "../colors";
-import { FlexCol, FlexColC, H2d, HR } from "../stylePrimitives";
+import { FlexCol, FlexColC, H2d, HR, RespRow } from "../stylePrimitives";
 import { SignUp } from "./signup/signup";
 
 const Container = styled.div`
@@ -14,12 +14,17 @@ const Container = styled.div`
   background: ${getColor(ColorKey.Background2)};
 `;
 
-const ContentContainer = styled.div`
-  display: flex;
+const HeaderContainer = styled(RespRow)`
+  justify-content: center;
+  gap: 2rem;
+  width: 90%;
+`;
+
+const ContentContainer = styled(RespRow)`
   justify-content: center;
   gap: 2rem;
   margin-top: 2em;
-  width: 75%;
+  width: 90%;
 `;
 
 const AdditionalServicesContainer = styled.div`
@@ -27,7 +32,7 @@ const AdditionalServicesContainer = styled.div`
   justify-content: center;
   gap: 2rem;
   margin-top: 2em;
-  width: 75%;
+  width: 90%;
 `;
 
 const TagLine = styled.span`
@@ -39,7 +44,7 @@ const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-top: 1rem;
+  margin: 1rem 2rem 0 0;
 
   @media ${breakpoint.xs} {
     width: 100%;
@@ -65,7 +70,18 @@ const Card = styled(FlexCol)`
   background-color: ${getColor(ColorKey.Background)};
   padding: 1rem;
   box-shadow: 4px 4px 4px ${getColor(ColorKey.LogoColor1)};
-  width: 100%;
+  min-width: 23%;
+
+  @media ${breakpoint.xs} {
+    min-width: 90%;
+  }
+`;
+
+const BigCard = styled(FlexCol)`
+  background-color: ${getColor(ColorKey.Background)};
+  padding: 1rem;
+  box-shadow: 4px 4px 4px ${getColor(ColorKey.LogoColor1)};
+  min-width: 100%;
 `;
 
 const Tier = styled.span`
@@ -93,6 +109,9 @@ const Inclusion = styled.span`
 const SomeDiv = styled.div`
   display: flex;
   justify-content: space-between;
+  @media ${breakpoint.xs} {
+    flex-direction: column;
+  }
 `;
 
 const Item = ({ children }: { children: React.ReactNode }) => {
@@ -120,13 +139,18 @@ export const Offerings = () => {
   return (
     <Container>
       <HR color={getColor(ColorKey.Primary2A)} />
-      <H2d>Scale your Web3 company with BlockOffice</H2d>
-      <TagLine>
-        We provide various back office solutions to help you grow your company. Pick the plan that best suits your needs
-      </TagLine>
+      <HeaderContainer>
+        <H2d>Scale your web3 company</H2d>
+      </HeaderContainer>
+      <ContentContainer>
+        <TagLine>
+          We provide various back office solutions to help you grow your company. Pick the plan that best suits your
+          needs
+        </TagLine>
+      </ContentContainer>
       <ContentContainer>
         <CardGroup tier="Basic">
-          <Category>CFO Advisory</Category>
+          <Category tabIndex={1}>CFO Advisory</Category>
           <List>
             <Item>Incorporation</Item>
             <Item>Structuring</Item>
@@ -173,7 +197,7 @@ export const Offerings = () => {
         </CardGroup>
       </ContentContainer>
       <AdditionalServicesContainer>
-        <CardGroup tier="Add-on Services">
+        <CardGroup tier="Additional Services">
           <SomeDiv>
             <List>
               <Item>AML/KYC</Item>

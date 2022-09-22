@@ -1,24 +1,26 @@
 import styled from "@emotion/styled";
 import { breakpoint } from "../breakpoints";
-import { ColorKey, COLORS, getColor } from "../colors";
+import { ColorKey, getColor } from "../colors";
 import { FontKey, getFont } from "../fonts";
+import { RespRow } from "../stylePrimitives";
 import { SignUp } from "./signup/signup";
 
-const SplashContainer = styled.div`
+const SplashContainer = styled(RespRow)`
   margin: 0em 0 0 0;
   @media ${breakpoint.xs} {
-    margin: 0rem 0 0;
+    margin: 2rem 0 0;
   }
-  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2em;
 `;
 
 const SplashTextContainer = styled.div`
   display: block;
-  text-align: start;
+  text-align: center;
   color: ${getColor(ColorKey.Primary1A)};
   margin-left: 0;
+  width: 99%;
 `;
 
 const TagLine = styled.div`
@@ -44,8 +46,11 @@ const SplashImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 2rem;
   width: 35%;
+
+  @media ${breakpoint.xs} {
+    width: 60%;
+  }
 `;
 
 const SplashImage = styled.img`

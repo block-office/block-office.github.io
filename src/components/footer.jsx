@@ -20,6 +20,7 @@ const Copyright = styled.span`
 const Email = styled.span`
   font-size: 18px;
   color: ${getColor(ColorKey.Primary2A)};
+  text-align: center;
 `;
 
 const SocialMedia = styled.div`

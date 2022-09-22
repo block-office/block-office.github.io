@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { breakpoint } from "../breakpoints";
 import { ColorKey, getColor } from "../colors";
-import { H2d, HR } from "../stylePrimitives";
+import { H2d, HR, RespRow } from "../stylePrimitives";
 import { SignUp } from "./signup/signup";
 
 const Container = styled.div`
@@ -14,15 +14,19 @@ const Container = styled.div`
   background: ${getColor(ColorKey.Background2)};
 `;
 
-const ContentContainer = styled.div`
-  display: flex;
+const ContentContainer = styled(RespRow)`
   align-items: center;
   justify-content: center;
   margin-top: 2em;
+  width: 90%;
+  gap: 2rem;
 `;
 
 const ImageContainer = styled.div`
-  margin: 0 3rem 0 0;
+  margin: 0;
+  @media ${breakpoint.xs} {
+    width: 65%;
+  }
 `;
 
 const Image = styled.img`
@@ -58,6 +62,14 @@ const SignUpContainer = styled.div`
   display: flex;
   justify-content: start;
   margin-top: 2em;
+
+  @media ${breakpoint.xs} {
+    justify-content: center;
+  }
+`;
+
+const SomeText = styled.span`
+  text-align: center;
 `;
 
 const Item = ({ children }: { children: React.ReactNode }) => {
@@ -73,18 +85,18 @@ export const Focus = () => {
   return (
     <Container>
       <HR color={getColor(ColorKey.Primary2A)} />
-      <H2d>Focus on growth, we have your back covered</H2d>
+      <H2d>Focus on growth</H2d>
       <ContentContainer>
         <ImageContainer>
           <Image />
         </ImageContainer>
         <TextContainer>
-          <span>We offer a range of services to serve your back office needs</span>
+          <SomeText>We offer a range of services to serve your back office needs</SomeText>
           <List>
-            <Item>CFO Services (fundraising, advisory and more)</Item>
+            <Item>CFO Services (fundraising, advisory)</Item>
             <Item>Management Accounting</Item>
             <Item>Bookkeeping</Item>
-            <Item>Bank Account Opening</Item>
+            <Item>Bank Account Provisioning</Item>
             <Item>Web3 Wallet Setup &amp; Ledger</Item>
             <Item>Tax Optimization</Item>
             <Item>Restructuring</Item>

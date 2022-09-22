@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { breakpoint } from "./breakpoints";
 import { ColorKey, getColor } from "./colors";
 
 export const H1 = styled.h1`
@@ -13,12 +14,30 @@ export const H2 = styled.h2`
 
 export const H2d = styled(H2)`
   color: ${getColor(ColorKey.Primary2A)};
+  text-align: center;
 `;
 
 export const H3 = styled.h3`
   font-size: 1.25rem;
   font-weight: 300;
 `;
+
+type RespRowProps = {
+  order?: number;
+};
+
+export const RespRow = styled.div<RespRowProps>`
+  display: flex;
+  @media ${breakpoint.xs} {
+    flex-direction: column;
+  }
+`;
+
+type DivRProps = {
+  order?: number;
+};
+
+export const DivR = styled.div<DivRProps>``;
 
 export const FlexCol = styled.div`
   display: flex;
@@ -36,6 +55,6 @@ type ColorProps = {
 export const HR = styled.hr<ColorProps>`
   border: 0;
   border-bottom: 0.75rem solid ${(props) => props.color};
-  width: 5%;
+  width: 5rem;
   margin-bottom: 2rem;
 `;

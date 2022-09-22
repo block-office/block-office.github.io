@@ -5,7 +5,7 @@ import { validateEmail } from "../email-validate";
 import { useForm } from "../hooks/useForm";
 import { useState } from "react";
 import { FontKey, getFont } from "../fonts";
-import { FlexCol, FlexColC } from "../stylePrimitives";
+import { FlexCol, FlexColC, HR } from "../stylePrimitives";
 
 const ContactContainer = styled(FlexColC)`
   padding: 5rem 0;
@@ -43,7 +43,7 @@ const FormBox = styled.div<{ width: string }>`
 `;
 
 const FormBoxOuter = styled(FlexCol)`
-  gap: 0.25rem;
+  gap: 0.25rem;b v  
 `;
 
 const FormLabel = styled.span`
@@ -141,7 +141,8 @@ const CTA = styled.button`
 `;
 
 const Text = styled.span`
-  margin: 1rem 1rem 0 0;
+  margin: 1rem 0;
+  text-align: center;
 `;
 
 function getInputSize() {
@@ -184,16 +185,28 @@ export const Contact = () => {
 
   return (
     <ContactContainer id="contact">
+      <HR color={getColor(ColorKey.Primary1A)} />
       <ContactHeader>Contact us!</ContactHeader>
-      <Text>
-        BlockOffice is your dedicated back office, powered by people and software. Get in touch today to learn how we
-        can provide customized help to your company!
-      </Text>
+      <Text>Get in touch today to learn how we can provide customized help to your company!</Text>
       <ContactFormContainer>
         <form onSubmit={handleSubmit}>
           <FormInputs>
             <FormBoxOuter>
-              <FormLabel>Name*</FormLabel>
+              <FormLabel>Name</FormLabel>
+              <FormBox width="100%">
+                <SubjectInput
+                  type="text"
+                  name="subject"
+                  placeholder="How do we refer to you?"
+                  value={(data.subject || "") as string}
+                  size={getInputSize()}
+                  onChange={handleChange("subject")}
+                  required
+                />
+              </FormBox>
+            </FormBoxOuter>
+            <FormBoxOuter>
+              <FormLabel>Email</FormLabel>
               <FormBox width="100%">
                 <EmailInput
                   type="email"
@@ -202,20 +215,6 @@ export const Contact = () => {
                   value={(data.email || "") as string}
                   size={getInputSize()}
                   onChange={handleChange("email")}
-                  required
-                />
-              </FormBox>
-            </FormBoxOuter>
-            <FormBoxOuter>
-              <FormLabel>Email*</FormLabel>
-              <FormBox width="100%">
-                <SubjectInput
-                  type="text"
-                  name="subject"
-                  placeholder="Who do you represent?"
-                  value={(data.subject || "") as string}
-                  size={getInputSize()}
-                  onChange={handleChange("subject")}
                   required
                 />
               </FormBox>
