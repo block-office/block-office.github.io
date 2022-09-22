@@ -18,7 +18,6 @@ const SplashTextContainer = styled.div`
   display: block;
   text-align: start;
   color: ${getColor(ColorKey.Primary1A)};
-  width: 35%;
   margin-left: 0;
 `;
 
@@ -37,7 +36,7 @@ const OneLiner = styled.div`
 
 const SignUpContainer = styled.div`
   display: flex;
-  justify-content: start;
+  justify-content: center;
   margin-top: 2em;
 `;
 
@@ -45,7 +44,8 @@ const SplashImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 2em;
+  margin: 0 2rem;
+  width: 35%;
 `;
 
 const SplashImage = styled.img`
@@ -56,12 +56,8 @@ export const Splash = () => {
   return (
     <SplashContainer>
       <SplashTextContainer>
-        <TagLine>Your dedicated</TagLine>
-        <TagLine>Web3 CFO</TagLine>
-        <OneLiner>
-          Setup, accounting, payroll, <br />
-          compliance, tax, and filings
-        </OneLiner>
+        <TagLine>Your dedicated Web3 CFO</TagLine>
+        <OneLiner>Setup, accounting, payroll, compliance, tax, and filings</OneLiner>
         <SignUpContainer>
           <SignUp />
         </SignUpContainer>

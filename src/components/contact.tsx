@@ -5,16 +5,11 @@ import { validateEmail } from "../email-validate";
 import { useForm } from "../hooks/useForm";
 import { useState } from "react";
 import { FontKey, getFont } from "../fonts";
+import { FlexCol, FlexColC } from "../stylePrimitives";
 
-const ContactContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3em 0em;
-  margin-top: 5em;
-  background-image: url("img/banner.svg");
-  border-radius: 24px;
-  width: 50%;
+const ContactContainer = styled(FlexColC)`
+  padding: 5rem 0;
+  width: 90%;
 
   @media ${breakpoint.xs} {
     width: 100%;
@@ -33,13 +28,13 @@ const ContactFormContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 2em 0 0 0;
   gap: 1em;
 `;
 
 const FormBox = styled.div<{ width: string }>`
   background: ${COLORS.WHITE};
-  border-radius: 4px;
+  border-radius: 2px;
+  border: 1px solid ${getColor(ColorKey.Primary1A)};
   display: flex;
   padding: 0.25em 0;
   justify-content: space-between;
@@ -47,10 +42,19 @@ const FormBox = styled.div<{ width: string }>`
   width: ${(props) => props.width};
 `;
 
+const FormBoxOuter = styled(FlexCol)`
+  gap: 0.25rem;
+`;
+
+const FormLabel = styled.span`
+  font-size: 0.85rem;
+`;
+
 const FormInputs = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
+  margin-top: 1rem;
 `;
 
 const EmailInput = styled.input`
@@ -136,6 +140,10 @@ const CTA = styled.button`
   }
 `;
 
+const Text = styled.span`
+  margin: 1rem 1rem 0 0;
+`;
+
 function getInputSize() {
   const query = window.matchMedia(breakpoint.xs);
   if (query.matches) {
@@ -176,43 +184,56 @@ export const Contact = () => {
 
   return (
     <ContactContainer id="contact">
-      <ContactHeader>Get in touch today!</ContactHeader>
+      <ContactHeader>Contact us!</ContactHeader>
+      <Text>
+        BlockOffice is your dedicated back office, powered by people and software. Get in touch today to learn how we
+        can provide customized help to your company!
+      </Text>
       <ContactFormContainer>
         <form onSubmit={handleSubmit}>
           <FormInputs>
-            <FormBox width="75%">
-              <EmailInput
-                type="email"
-                name="email"
-                placeholder="What's your email address?"
-                value={(data.email || "") as string}
-                size={getInputSize()}
-                onChange={handleChange("email")}
-                required
-              />
-            </FormBox>
-            <FormBox width="100%">
-              <SubjectInput
-                type="text"
-                name="subject"
-                placeholder="Who do you represent?"
-                value={(data.subject || "") as string}
-                size={getInputSize()}
-                onChange={handleChange("subject")}
-                required
-              />
-            </FormBox>
-            <FormBox width="22em">
-              <MessageInput
-                name="message"
-                placeholder="Which particular use cases are you interested in?"
-                value={(data.message || "") as string}
-                onChange={handleChange("message")}
-                cols={150}
-                rows={10}
-                required
-              />
-            </FormBox>
+            <FormBoxOuter>
+              <FormLabel>Name*</FormLabel>
+              <FormBox width="100%">
+                <EmailInput
+                  type="email"
+                  name="email"
+                  placeholder="What's your email address?"
+                  value={(data.email || "") as string}
+                  size={getInputSize()}
+                  onChange={handleChange("email")}
+                  required
+                />
+              </FormBox>
+            </FormBoxOuter>
+            <FormBoxOuter>
+              <FormLabel>Email*</FormLabel>
+              <FormBox width="100%">
+                <SubjectInput
+                  type="text"
+                  name="subject"
+                  placeholder="Who do you represent?"
+                  value={(data.subject || "") as string}
+                  size={getInputSize()}
+                  onChange={handleChange("subject")}
+                  required
+                />
+              </FormBox>
+            </FormBoxOuter>
+            <FormBoxOuter>
+              <FormLabel>Message</FormLabel>
+              <FormBox width="100%">
+                <MessageInput
+                  name="message"
+                  placeholder="Which particular use cases are you interested in?"
+                  value={(data.message || "") as string}
+                  onChange={handleChange("message")}
+                  cols={40}
+                  rows={10}
+                  required
+                />
+              </FormBox>
+            </FormBoxOuter>
           </FormInputs>
           <CTA type="submit" disabled={submitSuccess}>
             {submitSuccess ? "Thanks!" : "Send Message"}

@@ -65,7 +65,7 @@ export const Navigation = () => {
       right={
         <NavLinks>
           <NavLink href="#about">About</NavLink>
-          <NavLink href="#services">Services</NavLink>
+          {/* <NavLink href="#services">Services</NavLink> */}
           <SignUpContainer>
             <SignUp />
           </SignUpContainer>

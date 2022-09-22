@@ -1,12 +1,7 @@
 import styled from "@emotion/styled";
-
-import { breakpoint } from "../breakpoints";
 import { ColorKey, getColor } from "../colors";
 
 const AboutContainer = styled.div`
-  @media ${breakpoint.md} {
-    padding: 3em 0 0 0;
-  }
   display: flex;
   flex-direction: column;
   align-items: center;
