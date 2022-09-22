@@ -77,13 +77,6 @@ const Card = styled(FlexCol)`
   }
 `;
 
-const BigCard = styled(FlexCol)`
-  background-color: ${getColor(ColorKey.Background)};
-  padding: 1rem;
-  box-shadow: 4px 4px 4px ${getColor(ColorKey.LogoColor1)};
-  min-width: 100%;
-`;
-
 const Tier = styled.span`
   color: ${getColor(ColorKey.Primary1A)};
   font-size: 1.75rem;
