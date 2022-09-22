@@ -32,7 +32,7 @@ const AdditionalServicesContainer = styled.div`
   justify-content: center;
   gap: 2rem;
   margin-top: 2em;
-  width: 90%;
+  width: 91.5%;
 `;
 
 const TagLine = styled.span`
