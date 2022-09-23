@@ -21,6 +21,9 @@ const SplashTextContainer = styled.div`
   color: ${getColor(ColorKey.Primary1A)};
   margin-left: 0;
   max-width: 50%;
+  @media ${breakpoint.xs} {
+    max-width: initial;
+  }
 `;
 
 const TagLine = styled.div`
