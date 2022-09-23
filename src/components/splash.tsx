@@ -71,7 +71,7 @@ export const Splash = () => {
         </SignUpContainer>
       </SplashTextContainer>
       <SplashImageContainer>
-        <SplashImage src="img/banner.png" />
+        <SplashImage src="img/banner.svg" />
       </SplashImageContainer>
     </SplashContainer>
   );
