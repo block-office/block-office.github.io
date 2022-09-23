@@ -6,9 +6,9 @@ import { RespRow } from "../stylePrimitives";
 import { SignUp } from "./signup/signup";
 
 const SplashContainer = styled(RespRow)`
-  margin: 0em 0 0 0;
+  margin: 0em 0 2rem 0;
   @media ${breakpoint.xs} {
-    margin: 2rem 0 0;
+    margin: 2rem 0 2rem;
   }
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ const SplashTextContainer = styled.div`
   text-align: center;
   color: ${getColor(ColorKey.Primary1A)};
   margin-left: 0;
-  width: 99%;
+  max-width: 50%;
 `;
 
 const TagLine = styled.div`
